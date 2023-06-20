@@ -3,12 +3,287 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DRValeiras in GitHub</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <title>DRValeiras</title>
 </head>
 
 <body>
-  <h2>Custom profile page hosted in GitHub</h2>
+
+  <header id="header">
+    <nav id="nav-bar">
+      <ul class="horizontal">
+        <li><a href="/"><img id="header-img" src="images/logo.gif"></a></li>
+        <li class="nav-item"><a href="#mekanika" class="nav-link">Mekanika</a></li>
+        <li class="nav-item"><a href="#pequena-banda-robotica" class="nav-link">Pequeña Banda Robótica</a></li>
+        <li class="nav-item"><a href="#household-music" class="nav-link">Household music</a></li>
+        <li class="nav-item"><a href="#phd-neuromorphic-vision" class="nav-link">PhD - Neuromorphic Vision</a></li>
+        <li class="nav-item"><a href="#music" class="nav-link">Music</a></li>
+        <li class="nav-item"><a href="#choose-your-own-song" class="nav-link">Choose your own song</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="fullpage"></div>
+
+  <section id="introduction">
+    <h3 id="intro-text">A curious guy who makes Music, Robots and Webpages</h3>
+  </section>
+
+  <section id="mekanika">
+    <h1>Mekanika</h1>
+    <iframe src="https://player.vimeo.com/video/829882661?h=91afdbf0b8&color=7877e6&title=0&byline=0&portrait=0" class="video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+    <img src="images/Mekanika/Mekanika-on-Pictoplasma.jpg" alt="Mekanika on Pictoplasma" class="full-width">
+
+    <div class="text-block">
+      <p>Mekanika is the world's first robotic puppet rock band, conceived as a 'family project'; a collaboration between Dr.
+        David R. Valeiras and Cabeza Patata Studio. </p>
+
+      <p>Here we document the creation process, including the robotics, puppetry, and their overlap, as well as the
+        World Premiere at Pictoplasma Festival in Berlin, 2023.</p>
+    </div>
+
+    <div class="img-row">
+      <img src="images\Mekanika\Music-Box.jpg" id="img-mb" alt="Music Box Player">
+      <img src="images\Mekanika\Stage.jpg" id="img-stage" alt="The Stage at Pictoplasma">
+    </div>
+    <div class="img-row">
+      <img src="images\Mekanika\Glockenspiel.jpg" id="img-gl" alt="Glockenspiel">
+      <img src="images\Mekanika\Drummer.jpg" id="img-drummer" alt="The Drummer">
+    </div>
+
+    <div class="text-block">
+      <p>
+        Mekanika is a three-piece band made up of a Drummer, Metallophone player, and an interchangeable Music Box.
+        The musicians are controlled with servo motors and have different movements that allow them to play a range of songs automatically.
+      </p>
+    </div>
+
+    <div class="img-row">
+      <img src="images\Mekanika\Band-from-right.gif" class="img-half" alt="Mekanika playing">
+      <img src="images\Mekanika\Band-from-left.gif" class="img-half" alt="Mekanika playing">
+    </div>
+    <div class="img-row">
+      <img src="images\Mekanika\Patch.jpg" id="img-patch" alt="Patch on the character">
+      <img src="images\Mekanika\HiHat.jpg" id="img-HH" alt="HiHat">
+    </div>
+
+    <div class="text-block">
+      <p>
+        The concert experience is interactive so that, as well as watching the puppets play their instruments,
+        the audience can control the music and light show themself.
+      </p>
+    </div>
+
+    <img src="images\Mekanika\Controller.jpg" alt="MIDI controller" class="full-width">
+
+    <div class="text-block">
+      <p>A MIDI Keyboard stands in front of the stage so any audience member can control the tempo
+        and intensity of the music and lights, as well as the different displays on LED panels.
+        They can even become a digital puppet master, holding up different characters' arms to pause the play.
+      </p>
+    </div>
+
+    <div class="img-row">
+      <img src="images\Mekanika\Glockenspiel-2.jpg" class="img-glmb2" alt="Glockenspiel player">
+      <img src="images\Mekanika\MusicBox-2.jpg" class="img-glmb2" alt="Music box player">
+      <img src="images\Mekanika\Band.jpg" id="img-band" alt="Music box player">
+    </div>
+
+    <div class="text-block">
+      <p>
+        Everything is programmed with Arduinos, allowing the flexibility to adjust the programming
+        and allow for different types of interactions and musical encounters.
+      </p>
+    </div>
+
+  </section>
+
+  <section id="pequena-banda-robotica">
+    <h1>Pequeña Banda Robótica</h1>
+
+    <div class="text-block">
+      <p>The "Pequeña Banda Robótica" (Small Robotic Band) is an exploration in Robotics and Music. </p>
+      <p>Contructed from recycled, found materials such as chopsticks and jamjar lids, the instruments are
+        actioned with servo motors. This arduino-controlled miniature band is made up of three members, but it is ever-growing!
+        The aim of creating the Pequeña Banda Robótica is to make robotics more approachable and move towards facilitating access to learning.</p>
+    </div>
+
+    <img src="images\PBR\Prettier-band.jpg" alt="The Pequeña Banda Robotica" class="full-width">
+
+    <div class="img-row">
+      <img src="images\PBR\Prettier-drummer.jpg" class="img-third" alt="The drummer">
+      <img src="images\PBR\Prettier-glock.jpg" class="img-third" alt="The glockenspiel">
+      <img src="images\PBR\Prettier-vocal-section.jpg" class="img-third" alt="The vocal section">
+    </div>
+
+    <iframe src="https://www.youtube.com/embed/dNsn_Z9T3mk" class="video-iframe" title="Mr Sandman" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <h2>The Drummer</h2>
+
+    <div class="text-block">
+      <p>
+        The band's first musician, kickstarting the whole project. The sound from the snare and the
+        kick is captured by piezoelectric sensors, and digitally processed to enhance its sound.
+      </p>
+    </div>
+
+    <video class="vertical-video" controls>
+      <source src="videos\PBR\Sound-processing.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2>The Glockenspiel</h2>
+
+    <div class="text-block">
+      <p>
+        A glockenspiel is a type of metallophone, consisting of pitched metallic bars, usually
+        arranged in a keyboard layout. In our version they are placed in a semicircular positioning
+        to simplify the mechanical requirements.
+      </p>
+    </div>
+
+    <video class="vertical-video" controls>
+      <source src="videos\PBR\Harry.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2>The Vocal Section</h2>
+    <div class="text-block">
+      <p>
+        Three wooden boxes equipped with piezoelectric buzzers and a small servomotor form the vocal
+        section of the band. In the following video we can see them perform in manual mode, operated
+        using a MIDI controller.
+      </p>
+    </div>
+
+    <video class="vertical-video" controls>
+      <source src="videos\PBR\Vocal-section.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2>The code</h2>
+
+    <div class="text-block">
+      <p>
+        The Pequeña Banda Robótica is an open-source project, and its code is fully
+        available in <a href="https://github.com/valeiras" target="_blank">my GitHub account.</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="household-music">
+    <h1>Household Music</h1>
+    <div class="text-block">
+      <p>
+        Passion for music, Sound Processing and DIY projects come together in this project:
+        Household Music. Creating music using simple, day-to-day objects available around the house.
+      </p>
+    </div>
+
+    <iframe src="https://www.youtube.com/embed/fnRCxRtJDMs" class="video-iframe" title="Household music Vol III" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <br>
+
+    <div class="text-block">
+      <p>
+        The aim of this project is to showcase how anything can become an instrument. It brings
+        back the childhood wonder of searching for music and experimenting with everything.
+      </p>
+    </div>
+
+    <iframe src="https://www.youtube.com/embed/3eepl7VwVts" class="video-iframe" title="Household music Vol III" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <br>
+
+    <div class="text-block">
+      <p>
+        The educational potential of this project is particularly interesting. Often we're accustomed to
+        believe that musical instruments have to be professionally manufactured but, if we go to root of it,
+        we see that simple modifications in an object can produce different musical notes. For example, the
+        amount of water in a glass dictates the tone of a drip falling, or the tension of a rubber band can
+        act as a homemade bass guitar.
+      </p>
+    </div>
+
+    <iframe src="https://www.youtube.com/embed/tVUjKA8dVQA" class="video-iframe" title="Household music Vol III" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  </section>
+
+  <section id="phd-neuromorphic-vision">
+    <h1>PhD - Neuromorphic Vision</h1>
+    <div class="text-block">
+      <p>
+        I completed my PhD at the Institut de la Vision, Paris. The main focus of my research was the development of new algorithms for
+        neuromorphic event-based cameras.
+      </p>
+      <p>
+        My thesis, titled "Event-Based Detection and Tracking", is available to read <a href="https://theses.hal.science/tel-01727349" target="_blank">here.</a>
+      </p>
+    </div>
+
+    <iframe src="https://www.youtube.com/embed/feBozLYZhB8" class="video-iframe" title="Event-Based 3D pose estimation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <h3>Publications</h3>
+    <ul class="vertical">
+      <li>
+        Reverter Valeiras, D., Clady, X., Ieng, S. H., & Benosman, R. B. (2018).
+        “<a href="https://ieeexplore.ieee.org/abstract/document/8463622" target="_blank">Event-Based Line Fitting and Segment Detection using a Neuromorphic Visual Sensor</a>”.
+        IEEE Transactions on Neural Networks and Learning Systems.
+      </li>
+
+      <li>
+        Reverter Valeiras, D., Kime, S., Ieng, S. H., & Benosman, R. B. (2016).
+        “<a href="https://www.frontiersin.org/articles/10.3389/fnins.2016.00208/full" target="_blank">An Event-Based Solution to the Perspective-n-Point Problem</a>”.
+        Frontiers in Neuroscience.
+      </li>
+
+      <li>
+        Reverter Valeiras, D., Orchard, G., Ieng, S. H., & Benosman, R. (2016).
+        “<a href="https://www.frontiersin.org/articles/10.3389/fnins.2015.00522/full" target="_blank">Neuromorphic Event-Based 3D Pose Estimation</a>”.
+        Frontiers in Neuroscience.
+      </li>
+
+      <li>
+        Akolkar H., Reverter Valeiras D., Benosman, R., & Bartolozzi, C. (2015).
+        “<a href="" target="_blank">Visual-Auditory saliency detection using event-driven visual sensors</a>”.
+        IEEE 2015 International Conference on Event-based Control, Communication, and Signal Processing (EBCCSP).
+      </li>
+
+      <li>
+        Reverter Valeiras, D., Lagorce, X., Clady, X., Bartolozzi, C., Ieng, S. H., & Benosman, R. (2015).
+        “<a href="https://ieeexplore.ieee.org/abstract/document/7063246" target="_blank">An Asynchronous Neuromorphic Event-Driven Visual Part-Based Shape Tracking</a>”.
+        IEEE Transactions on Neural Networks and Learning Systems.
+      </li>
+    </ul>
+
+    <img src="images\PhD\Pose-estimation.png" alt="3D Pose Estimation" class="full-width">
+
+    <h2>Conferences, Workshops and Stays</h2>
+    <ul class="vertical">
+      <li>04/27/2014 - 04/11/2014: The CapoCaccia Workshops toward Neuromorphic Intelligence. Alghero, Itally.</li>
+      <li>06/08/2015 - 07/18/2015: Telluride Neuromorphic Cognition Engineering Workshop. Telluride, Colorado.</li>
+      <li>02/20/2015 - 03/19/2015: research collaboration with the SINAPSE Institute, National University of Singapore.</li>
+    </ul>
+
+  </section>
+
+  <section id="choose-your-own-song">
+  </section>
+
+  <section id="social-media">
+    <a href="https://github.com/valeiras" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.instagram.com/drvaleiras/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://twitter.com/Valeiras" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.facebook.com/errepuntovaleiras" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+  </section>
+
+  <script src="https://kit.fontawesome.com/7828a3c723.js" crossorigin="anonymous"></script>
+  <script src="assets\js\app.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,320 @@
+html {
+  font-family: Roboto-mono, monospace;
+  line-height: 1.5;
+  color: #012b55;
+  font-size: 18px;
+  width: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Laptop */
+@media (max-width: 1400px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Cellphone */
+@media (max-width: 450px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body,
+div,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+img {
+  cursor: zoom-in;
+}
+
+#intro-text {
+  font-weight: normal;
+  font-size: 1.3rem;
+  margin-top: 1.7rem;
+}
+
+.fa-brands {
+  font-size: 1.5rem;
+  color: #012b55;
+  padding: 0.25rem;
+}
+
+section {
+  text-align: center;
+  margin: 0 auto 0;
+  width: 75%;
+  padding-top: 5rem;
+}
+
+section:first-of-type {
+  margin-bottom: -75px;
+}
+
+section:last-of-type {
+  margin-bottom: 75px;
+}
+
+header {
+  position: sticky;
+  display: inline-flex;
+  z-index: 999;
+}
+
+a {
+  color: #012b55;
+}
+
+a:hover {
+  color: black;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  margin-bottom: -1rem;
+}
+
+p {
+  text-align: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  p {
+    width: 90%;
+  }
+}
+
+p:first-child {
+  margin-top: 2rem;
+}
+p:last-child {
+  margin-bottom: 2rem;
+}
+
+#nav-bar {
+  background-color: white;
+  position: fixed;
+  border-bottom: solid 1px black;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  color: #012b55;
+}
+
+.nav-item {
+}
+
+.nav-item:hover {
+  background-color: aliceblue;
+}
+
+ul.vertical {
+  width: 70%;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  ul.vertical {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+ul.vertical li {
+  margin-top: 3rem;
+}
+
+ul.horizontal {
+  display: inline-flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+}
+
+ul.horizontal li {
+  display: flex;
+  align-items: center;
+}
+
+ul.horizontal li a {
+  display: inline-block;
+  text-align: center;
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+}
+
+.img-row {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 0.5%;
+}
+
+.img-row img {
+  gap: 1%;
+}
+
+.video-iframe {
+  aspect-ratio: 16/9;
+  width: 80%;
+  margin: 0.5% auto 0.5%;
+}
+
+.vertical-video {
+  width: 30%;
+}
+
+/* Laptop */
+@media (max-width: 1400px) {
+  .vertical-video {
+    width: 40%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .vertical-video {
+    width: 50%;
+  }
+}
+
+/* Cellphone */
+@media (max-width: 450px) {
+  .vertical-video {
+    width: 70%;
+  }
+}
+
+.full-width {
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
+}
+
+#header-img {
+  width: 20vw;
+  max-width: 250px;
+  min-width: 150px;
+  margin: auto 2rem auto 1rem;
+}
+
+#img-mb {
+  width: 23.42%;
+}
+
+#img-stage {
+  width: 76.08%;
+}
+
+#img-gl {
+  width: 68.75%;
+}
+
+#img-drummer {
+  width: 30.75%;
+}
+
+.img-half {
+  width: 49.75%;
+}
+
+.img-third {
+  width: 33%;
+}
+
+#img-patch {
+  width: 30.52%;
+}
+
+#img-HH {
+  width: 68.98%;
+}
+
+.img-glmb2 {
+  width: 23.166%;
+}
+
+#img-band {
+  width: 52.233%;
+}
+
+@media (max-width: 768px) {
+  img {
+    margin-bottom: 2px;
+  }
+  .img-row {
+    margin-bottom: 0px;
+    gap: 0%;
+  }
+
+  #img-mb,
+  #img-stage,
+  #img-gl,
+  #img-drummer,
+  .img-half,
+  .img-third,
+  #img-patch,
+  #img-HH,
+  .img-glmb2,
+  #img-band {
+    width: 100%;
+  }
+}
+
+#fullpage {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  left: 0;
+  width: 100vw;
+  margin: 0;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: rgba(55, 55, 55, 0.9);
+  cursor: zoom-out;
+  transtion: 0.5s;
+}
