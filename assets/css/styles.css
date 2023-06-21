@@ -20,6 +20,7 @@ body {
   align-items: center;
   text-align: center;
   gap: 0;
+  overflow-x: hidden;
 }
 
 html,
@@ -101,8 +102,12 @@ section {
 }
 
 section:first-of-type {
-  margin-top: 2rem;
-  padding-top: 0rem;
+  position: relative;
+  top: 0;
+}
+
+section:nth-of-type(2) {
+  margin-top: -5.5rem;
 }
 
 section:last-of-type {
@@ -354,6 +359,22 @@ img:hover {
 }
 
 /* --------------------------- Lists --------------------------*/
+
+ul.no-bullets,
+ul.dashes {
+  margin: 0;
+  padding: 0;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+}
+
+ul.dashes {
+  list-style-type: "-";
+  list-style-position: outside;
+}
+
 .list-container {
   display: flex;
   flex-wrap: wrap;
@@ -363,10 +384,8 @@ img:hover {
   margin-bottom: 2rem;
 }
 
-.list-container ul {
-  list-style-type: none;
+list-container ul {
   width: 40%;
-  margin: 0;
 }
 
 /* Tablet */
@@ -376,6 +395,10 @@ img:hover {
   }
 }
 
-.list-container ul li {
-  margin-top: 0.5rem;
+ul.no-bullets li {
+  margin: 0.5rem auto 0;
+}
+
+ul.dashes li {
+  margin: 0 auto 1.5rem;
 }

@@ -1,8 +1,8 @@
 function exitFullpage() {
    //$('#img-gallery').removeClass('active');
-    $("#img-gallery").removeAttr("style");
+   $("#img-gallery").removeAttr("style");
    $('#img-gallery').toggleClass(['active', 'inactive']);
-   $("body").css("overflow", "visible");
+   $("body").css("overflow-y", "visible");
 }
 
 function enterFullPage() {
@@ -12,7 +12,7 @@ function enterFullPage() {
       "top": window.scrollY + "px",
       "height": window.outerHeight + "px"
    })
-   $("body").css("overflow", "hidden");
+   $("body").css("overflow-y", "hidden");
 }
 
 $("img:not(#header-img)").on("click", enterFullPage);
@@ -22,11 +22,12 @@ $(document).on("keydown", exitFullpage);
 // Adjust the top margin of the first section, so there is no content overlap:
 const firstSection = $('section:first-of-type');
 const navBar = $('#nav-bar');
-firstSection.css('margin-top', navBar.css('height'));
-   
-$(window).on('resize', function (e) {
-   console.log(navBar.css('height'));
-   console.log(parseFloat(navBar.css('height'))+'px');
-   firstSection.css('margin-top', navBar.css('height'));
-});
+
+function positionFirstSection() {
+   firstSection.css('padding-top', (parseFloat(navBar.css('height')) + 75) + 'px');
+};
+
+// We adjust it when the DOM is loaded, and on window resize
+$(document).on("DOMContentLoaded", positionFirstSection);
+$(window).on('resize', positionFirstSection);
 
