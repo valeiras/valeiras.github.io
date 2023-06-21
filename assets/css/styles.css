@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -23,15 +24,15 @@ body {
 
 html,
 body {
-   position: absolute;
-   top:0;
+  position: absolute;
+  top: 0;
   margin: 0;
   padding: 0;
 }
 
 /* --------------------------- Header classes --------------------------*/
 header {
-  position: absolute;
+  position: fixed;
   display: inline-flex;
   z-index: 999;
   top: 0;
@@ -92,8 +93,8 @@ a:hover {
 
 section {
   width: 60%;
-  margin-top: -1rem;
-  padding-top: 4rem;
+  margin-top: -2.5rem;
+  padding-top: 5.5rem;
   flex: auto;
 }
 
@@ -107,6 +108,25 @@ section:last-of-type {
 }
 
 /* --------------------------- Text classes --------------------------*/
+@media (max-width: 1400px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Cellphone */
+@media (max-width: 450px) {
+  html {
+    font-size: 14px;
+  }
+}
 
 h1 {
   font-size: 2rem;
@@ -142,9 +162,9 @@ p:last-child {
   margin-bottom: 2rem;
 }
 
-.fa-brands{
-   font-size: 1.5rem;
-   padding: 0 .5rem
+.fa-brands {
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
 }
 /* --------------------------- Video classes --------------------------*/
 .video-iframe {
@@ -193,7 +213,7 @@ img:hover {
 .img-row {
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   margin: auto;
 }
 
@@ -242,6 +262,26 @@ img:hover {
   width: 52.233%;
 }
 
+#img-flag {
+  width: 14.8%;
+}
+
+#img-front {
+  width: 43.6%;
+}
+
+#img-dr2 {
+  width: 41.5%;
+}
+
+#img-david {
+  width: 57.53%;
+}
+
+#img-stage2 {
+  width: 42.47%;
+}
+
 @media (max-width: 768px) {
   #img-mb,
   #img-stage,
@@ -252,22 +292,36 @@ img:hover {
   #img-patch,
   #img-HH,
   .img-glmb2,
-  #img-band {
+  #img-band,
+  #img-flag,
+  #img-front,
+  #img-dr2,
+  #img-david,
+  #img-stage2 {
     width: 100%;
   }
 }
 
-#fullpage {
-  display: none;
+#img-gallery {
   position: absolute;
   z-index: 9999;
   left: 0;
-  width: 100vw;
   margin: 0;
   background-size: contain;
   background-repeat: no-repeat no-repeat;
   background-position: center center;
   background-color: rgba(55, 55, 55, 0.9);
+  transition: 0.5s;
   cursor: zoom-out;
-  transtion: 0.5s;
+}
+
+#img-gallery.inactive {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+#img-gallery.active {
+  display: block;
+  width: 100vw;
 }

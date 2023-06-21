@@ -1,20 +1,22 @@
 function exitFullpage() {
-   $("#fullpage").removeAttr("style");
+   //$('#img-gallery').removeClass('active');
+    $("#img-gallery").removeAttr("style");
+   $('#img-gallery').toggleClass(['active', 'inactive']);
    $("body").css("overflow", "visible");
 }
 
 function enterFullPage() {
-   $("#fullpage").css({
+   $('#img-gallery').toggleClass(['active', 'inactive']);
+   $("#img-gallery").css({
       "backgroundImage": "url(" + this.src + ")",
-      "display": "block",
-      "top": $(document).scrollTop() + "px",
+      "top": window.scrollY + "px",
       "height": window.outerHeight + "px"
    })
    $("body").css("overflow", "hidden");
 }
 
 $("img:not(#header-img)").on("click", enterFullPage);
-$("#fullpage").on("click", exitFullpage);
+$("#img-gallery").on("click", exitFullpage);
 $(document).on("keydown", exitFullpage);
 
 // Adjust the top margin of the first section, so there is no content overlap:
