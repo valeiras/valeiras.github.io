@@ -239,7 +239,7 @@ img:hover {
 }
 
 .img-half {
-  width: 49.75%;
+  width: 50%;
 }
 
 .img-third {
@@ -263,15 +263,15 @@ img:hover {
 }
 
 #img-flag {
-  width: 14.8%;
+  width: 14.88%;
 }
 
 #img-front {
-  width: 43.6%;
+  width: 43.47%;
 }
 
 #img-dr2 {
-  width: 41.5%;
+  width: 41.65%;
 }
 
 #img-david {
@@ -280,6 +280,26 @@ img:hover {
 
 #img-stage2 {
   width: 42.47%;
+}
+
+#img-katie {
+  width: 51.79%;
+}
+
+#img-drummer-head {
+  width: 24.1%;
+}
+
+#img-mb-head {
+  width: 24.1%;
+}
+
+#img-kid1 {
+  width: 53.09%;
+}
+
+#img-kid2 {
+  width: 46.91%;
 }
 
 @media (max-width: 768px) {
@@ -297,7 +317,12 @@ img:hover {
   #img-front,
   #img-dr2,
   #img-david,
-  #img-stage2 {
+  #img-stage2,
+  #img-katie,
+  #img-drummer-head,
+  #img-mb-head,
+  #img-kid1,
+  #img-kid2 {
     width: 100%;
   }
 }
@@ -324,4 +349,31 @@ img:hover {
 #img-gallery.active {
   display: block;
   width: 100vw;
+}
+
+/* --------------------------- Lists --------------------------*/
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+
+.list-container ul {
+  list-style-type: none;
+  width: 40%;
+  margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .list-container ul {
+    width: 100%;
+  }
+}
+
+.list-container ul li {
+  margin-top: 0.5rem;
 }
