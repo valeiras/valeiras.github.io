@@ -1,0 +1,62 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  align-content: space-between;
+  overflow: hidden;
+}
+
+h1{
+   text-align: center;
+   width:100%;
+   padding-top: 10px;
+}
+
+div.text-container{
+   margin-bottom: 10px;
+}
+
+span.title{
+   width: 100%;
+   text-align: center;
+   font-size: 1.5rem;
+}
+
+img.snapshot{
+   width: 50%;
+   border-radius: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 25vw;
+  min-width: 300px;
+  max-width: 500px;
+  height: fit-content;
+  background-color: aliceblue;
+  border-radius: 15px;
+  shadow: 0 0 10px black;
+  text-align: center;
+  transition: 0.3s;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+section#social-media{
+   position:relative;
+   width:100%;
+   text-align:center;
+   font-size: 1.5rem;
+   padding-bottom: 20px;
+}
