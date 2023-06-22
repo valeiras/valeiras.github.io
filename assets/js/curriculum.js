@@ -6,6 +6,7 @@ let options = {
    jspdf: { unit: 'mm', format: 'a4' },
    html2canvas: {dpi: 300, scale:3}
 }
+
 function generatePDF() {
    const element = document.getElementById('cv-container');
    options.html2canvas.scrollX = -8;

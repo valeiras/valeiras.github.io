@@ -1,3 +1,8 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
 body {
   height: 100vh;
   width: 100vw;
@@ -7,13 +12,32 @@ body {
   gap: 50px;
   flex-wrap: wrap;
   align-content: space-between;
-  overflow: hidden;
+  overflow: auto;
+}
+
+@media (max-width: 768px){
+   h1{
+      font-size: 2rem;
+   }
+}
+
+
+@media (max-width: 768px){
+   h1{
+      font-size: 2rem;
+   }
+}
+
+@media (max-width: 450px){
+   h1{
+      font-size: 1.5rem;
+   }
 }
 
 h1{
    text-align: center;
    width:100%;
-   padding-top: 10px;
+   padding-top: 30px;
 }
 
 div.text-container{
@@ -29,6 +53,7 @@ span.title{
 img.snapshot{
    width: 50%;
    border-radius: 20px;
+   box-shadow: 1px 1px 3px var(--dark-blue);
 }
 
 a {
@@ -41,8 +66,7 @@ a {
   max-width: 500px;
   height: fit-content;
   background-color: aliceblue;
-  border-radius: 15px;
-  shadow: 0 0 10px black;
+  border-radius: 50px;
   text-align: center;
   transition: 0.3s;
   padding-top: 20px;
