@@ -61,8 +61,8 @@ div.section {
 }
 
 #education,
-#skills{
-   flex-grow:1
+#skills {
+  flex-grow: 1;
 }
 
 h1,
@@ -83,8 +83,8 @@ h5 {
   margin-top: 10px;
 }
 
-h5:first-of-type{
-   margin-top: 1rem;
+h5:first-of-type {
+  margin-top: 1rem;
 }
 
 h4.section-header {
@@ -147,45 +147,33 @@ p.long-text {
   font-size: 0.8rem;
 }
 
-.skill-bar {
+.skill-bar-container {
   height: 6px;
   width: 100%;
   margin-bottom: 2px;
   border: 0.1px solid var(--dark-blue);
+  background-color: aliceblue;
+}
+
+.skill-bar {
+  background-color: var(--dark-blue);
+  height: 100%;
 }
 
 .skill-bar.s100 {
-  background: var(--dark-blue);
+  width: 100%;
 }
 
 .skill-bar.s80 {
-  background: linear-gradient(
-    90deg,
-    var(--dark-blue),
-    var(--dark-blue) 80%,
-    var(--light-blue) 80%,
-    var(--light-blue)
-  );
+  width: 80%;
 }
 
 .skill-bar.s60 {
-  background: linear-gradient(
-    90deg,
-    var(--dark-blue),
-    var(--dark-blue) 60%,
-    var(--light-blue) 60%,
-    var(--light-blue)
-  );
+  width: 60%;
 }
 
 .skill-bar.s40 {
-  background: linear-gradient(
-    90deg,
-    var(--dark-blue),
-    var(--dark-blue) 40%,
-    var(--light-blue) 40%,
-    var(--light-blue)
-  );
+  width: 40%;
 }
 
 a {
