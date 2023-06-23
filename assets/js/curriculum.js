@@ -20,11 +20,14 @@ button.addEventListener('click', generatePDF);
 function scaleCV() {
    const cvContainer = document.getElementById('cv-container');
    const cvWidth = cvContainer.getBoundingClientRect().width;
-   const windowWidth = screen.width;
+   const windowWidth = document.documentElement.clientWidth;
+   console.log(screen.width);
+   console.log(window.innerWidth);
+   console.log(document.documentElement.clientWidth);
    if (cvWidth > windowWidth) {
       const r = windowWidth / cvWidth;
       document.body.style.transform = `scale(${r})`;
-      document.body.style.transform-origin = 0 0;
+      document.body.style.transformOrigin = "0 0";
    }
 }
 
