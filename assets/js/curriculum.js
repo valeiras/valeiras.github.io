@@ -20,7 +20,9 @@ button.addEventListener('click', generatePDF);
 function scaleCV() {
    const cvContainer = document.getElementById('cv-container');
    const cvWidth = cvContainer.getBoundingClientRect().width;
-   const windowWidth = window.innerWidth;
+   // const windowWidth = window.innerWidth;
+   // const windowWidth = screen.width;
+   const windowWidth = document.documentElement.clientWidth;
    if (cvWidth > windowWidth) {
       const r = windowWidth / cvWidth;
       cvContainer.style.transform = `scale(${r})`;
