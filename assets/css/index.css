@@ -1,6 +1,6 @@
-*{
-   margin: 0;
-   padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -15,45 +15,44 @@ body {
   overflow: auto;
 }
 
-@media (max-width: 768px){
-   h1{
-      font-size: 2rem;
-   }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
 
-
-@media (max-width: 768px){
-   h1{
-      font-size: 2rem;
-   }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
 
-@media (max-width: 450px){
-   h1{
-      font-size: 1.5rem;
-   }
+@media (max-width: 450px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 
-h1{
-   text-align: center;
-   width:100%;
-   padding-top: 30px;
+h1 {
+  text-align: center;
+  width: 100%;
+  padding-top: 30px;
 }
 
-div.text-container{
-   margin-bottom: 10px;
+div.text-container {
+  margin-bottom: 10px;
 }
 
-span.title{
-   width: 100%;
-   text-align: center;
-   font-size: 1.5rem;
+span.title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
-img.snapshot{
-   width: 50%;
-   border-radius: 20px;
-   box-shadow: 1px 1px 3px var(--dark-blue);
+img.snapshot {
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px var(--dark-blue);
 }
 
 a {
@@ -77,10 +76,10 @@ a {
   transform: scale(1.05);
 }
 
-section#social-media{
-   position:relative;
-   width:100%;
-   text-align:center;
-   font-size: 1.5rem;
-   padding-bottom: 20px;
+section#social-media {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 20px;
 }

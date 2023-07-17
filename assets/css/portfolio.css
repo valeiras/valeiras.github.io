@@ -66,27 +66,24 @@ ul.horizontal {
 
 section {
   width: 60%;
-  margin-top: -2.5rem;
-  padding-top: 5.5rem;
+  scroll-margin-top: 4rem;
   flex: auto;
 }
 
 section:first-of-type {
   position: relative;
-  top: 0;
-}
-
-section:nth-of-type(2) {
-  margin-top: -5.5rem;
+  top: 5rem;
+  scroll-margin-top: 5rem;
+  margin-bottom: 3rem;
 }
 
 section:last-of-type {
   margin-bottom: 4rem;
 }
 
-section#social-media{
-   height: 100px;
-   bottom: 0;
+section#social-media {
+  height: 100px;
+  bottom: 0;
 }
 /* --------------------------- Text classes --------------------------*/
 @media (max-width: 1400px) {
@@ -345,7 +342,7 @@ ul.no-bullets {
 }
 
 ul.dashes {
-  list-style-type: "-";
+  list-style-type: '-';
   list-style-position: outside;
 }
 
@@ -375,4 +372,30 @@ ul.no-bullets li {
 
 ul.dashes li {
   margin: 0 auto 1.5rem;
+}
+
+button.read-more-less {
+  background-color: transparent;
+  border: transparent;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  /* margin-top: 1rem; */
+}
+
+button.read-more-less a {
+  text-decoration: none;
+}
+
+#mekanika-2,
+#pequena-banda-robotica-2,
+#household-music-2,
+#phd-2,
+#music-2,
+#dald-2 {
+  display: none;
+}
+
+#social-media {
+  margin-top: 2rem;
 }
