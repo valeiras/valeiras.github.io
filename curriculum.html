@@ -1,184 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/curriculum.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- html2pdf CDN link -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <title>CV David Reverter Valeiras</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/curriculum.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <!-- html2pdf CDN link -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-  <title>CV David Reverter Valeiras</title>
-</head>
-
-<body>
-  <button id="generate-btn">Generate pdf</button>
-  <div id="cv-container">
-    <div id="left-container">
-      <img id="personal-photo" src="assets\images\CV\Foto CV.png" alt="David Reverter Valeiras">
-      <div class="section" id="about">
-        <h4 class="section-header left-header">ABOUT</h4>
-        <p class="long-text">After completing my PhD in Robotics and Computer Science, I introduced my love of music and sound
-          into my practice. I'm attracted by the technical aspect of sound and music, since I see all of these as
-          inextricably linked and also love the creative side of technology
-          and programming. I am involved in front-end development too, and have created a
-          number of webpages, like this CV!</p>
-      </div>
-      <div id="btn-container">
-        <a href="assets\pdf\CV_David_Reverter_Valeiras.pdf" target="_blank"><button id="download-btn">Download as pdf</button></a>
-      </div>
-      <div class="section" id="contact">
-        <h4 class="section-header left-header">CONTACT</h4>
-        <div class="two-column">
-          <ul class="custom-list" id="logos">
-            <li><i class="fa-solid fa-location-dot"></i></li>
-            <li><i class="fa-solid fa-envelope"></i></li>
-            <li><i class="fa-brands fa-linkedin"></i></li>
-            <li><i class="fa-brands fa-github"></i></li>
-          </ul>
-          <ul class="custom-list" id="contacts">
-            <li>Granada (Spain)</li>
-            <li>d.r.valeiras@gmail.com</li>
-            <li><a href="https://www.linkedin.com/in/david-reverter-valeiras-b8772440/">
-                LinkedIn profile</a></li>
-            <li><a href="https://github.com/valeiras">github.com/valeiras</a></li>
-          </ul>
+  <body>
+    <button id="generate-btn">Generate pdf</button>
+    <div id="cv-container">
+      <div id="left-container">
+        <img
+          id="personal-photo"
+          src="assets\images\CV\Foto CV.png"
+          alt="David Reverter Valeiras"
+        />
+        <div class="section" id="about">
+          <h4 class="section-header left-header">ABOUT</h4>
+          <p class="long-text">
+            After completing my PhD in Robotics and Computer Science, I
+            introduced my love of music and sound into my practice. I'm
+            attracted by the technical aspect of sound and music, since I see
+            all of these as inextricably linked and also love the creative side
+            of technology and programming. I am involved in front-end
+            development too, and have created a number of webpages, like this
+            CV!
+          </p>
+        </div>
+        <div id="btn-container">
+          <a href="assets\pdf\CV_David_Reverter_Valeiras.pdf" target="_blank"
+            ><button id="download-btn">Download as pdf</button></a
+          >
+        </div>
+        <div class="section" id="contact">
+          <h4 class="section-header left-header">CONTACT</h4>
+          <div class="two-column">
+            <ul class="custom-list" id="logos">
+              <li><i class="fa-solid fa-location-dot"></i></li>
+              <li><i class="fa-solid fa-envelope"></i></li>
+              <li><i class="fa-brands fa-linkedin"></i></li>
+              <li><i class="fa-brands fa-github"></i></li>
+            </ul>
+            <ul class="custom-list" id="contacts">
+              <li>Granada (Spain)</li>
+              <li>d.r.valeiras@gmail.com</li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/david-reverter-valeiras-b8772440/"
+                >
+                  LinkedIn profile</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/valeiras">github.com/valeiras</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <div id="right-container">
-      <h3 id="name">David Reverter Valeiras</h3>
-      <hr>
-      <h4>Doctor of Engineering - Front End Developer</h4>
-      <div class="section" id="education">
-        <h4 class="section-header right-header">EDUCATION</h4>
-        <div class="left-align">
-          <ul class="custom-list" id="education">
-            <li class="title"><a href="https://theses.hal.science/tel-01727349/document" target="_blank">PhD in Computer Science</a></li>
-            <li class="institution">Université Pierre et Marie Curie (Paris)</li>
-            <li class="title">Master Degree in advanced Systems and Robotics </li>
-            <li class="institution">Université Pierre et Marie Curie (Paris)</li>
-            <li class="title">Industrial Engineering, Specialty: Mechanics </li>
-            <li class="institution">E.T.S.E.I. de Vigo (Vigo)</li>
-            <li class="title">Live Sound Technician </li>
-            <li class="institution">Centro de formación escénica de Andalucía (Granada)</li>
-          </ul>
-        </div>
-
-        <div class="section" id="skills">
-          <h4 class="section-header right-header">SKILLS</h4>
-          <h5>Programming languages:</h5>
-          <div class="two-column">
-            <div class="skills-table">
-              <i class="devicon-cplusplus-plain"></i>C++
-              <div class="skill-bar-container">
-                <div class="skill-bar s100"></div>
-              </div>
-              <i class="devicon-python-plain"></i>Python
-              <div class="skill-bar-container">
-                <div class="skill-bar s80"></div>
-              </div>
-              <i class="devicon-javascript-plain"></i>JavaScript
-              <div class="skill-bar-container">
-                <div class="skill-bar s80"></div>
-              </div>
-            </div>
-            <div class="skills-table">
-              <i class="devicon-html5-plain"></i>HTML
-              <div class="skill-bar-container">
-                <div class="skill-bar s80"></div>
-              </div>
-              <i class="devicon-css3-plain"></i>CSS
-              <div class="skill-bar-container">
-                <div class="skill-bar s80"></div>
-              </div>
-            </div>
-          </div>
-          <h5>Tools:</h5>
-          <div class="two-column">
-            <div class="skills-table">
-              <i class="devicon-arduino-plain"></i>Arduino
-              <div class="skill-bar-container">
-                <div class="skill-bar s100"></div>
-              </div>
-              <i class="devicon-matlab-plain"></i>Matlab
-              <div class="skill-bar-container">
-                <div class="skill-bar s100"></div>
-              </div>
-              <i class="devicon-git-plain"></i>Git
-              <div class="skill-bar-container">
-                <div class="skill-bar s80"></div>
-              </div>
-            </div>
-            <div class="skills-table">
-              <i class="devicon-jquery-plain"></i>jQuery
-              <div class="skill-bar-container">
-                <div class="skill-bar s80"></div>
-              </div>
-              <i class="devicon-react-original"></i>React
-              <div class="skill-bar-container">
-                <div class="skill-bar s60"></div>
-              </div>
-              <i class="devicon-nodejs-plain"></i>Node.js
-              <div class="skill-bar-container">
-                <div class="skill-bar s40"></div>
-              </div>
-            </div>
-          </div>
-          <h5>Languages:</h5>
+      <div id="right-container">
+        <h3 id="name">David Reverter Valeiras</h3>
+        <hr />
+        <h4>Doctor of Engineering - Front End Developer</h4>
+        <div class="section" id="education">
+          <h4 class="section-header right-header">EDUCATION</h4>
           <div class="left-align">
-            <div class="skills-table">
-              <p class="skill">Spanish</p>
-              <p class="level">Native</p>
-              <div class="skill-bar-container">
-                <div class="skill-bar s100"></div>
+            <ul class="custom-list" id="education">
+              <li class="title">
+                <a
+                  href="https://theses.hal.science/tel-01727349/document"
+                  target="_blank"
+                  >PhD in Computer Science</a
+                >
+              </li>
+              <li class="institution">
+                Université Pierre et Marie Curie (Paris)
+              </li>
+              <li class="title">
+                Master Degree in advanced Systems and Robotics
+              </li>
+              <li class="institution">
+                Université Pierre et Marie Curie (Paris)
+              </li>
+              <li class="title">
+                Industrial Engineering, Specialty: Mechanics
+              </li>
+              <li class="institution">E.T.S.E.I. de Vigo (Vigo)</li>
+              <li class="title">Live Sound Technician</li>
+              <li class="institution">
+                Centro de formación escénica de Andalucía
+              </li>
+            </ul>
+          </div>
+
+          <div class="section" id="skills">
+            <h4 class="section-header right-header">SKILLS</h4>
+            <h5>Programming languages:</h5>
+            <div class="two-column">
+              <div class="skills-table">
+                <i class="devicon-cplusplus-plain"></i>C++
+                <div class="skill-bar-container">
+                  <div class="skill-bar s100"></div>
+                </div>
+                <i class="devicon-python-plain"></i>Python
+                <div class="skill-bar-container">
+                  <div class="skill-bar s80"></div>
+                </div>
+                <i class="devicon-javascript-plain"></i>JavaScript
+                <div class="skill-bar-container">
+                  <div class="skill-bar s80"></div>
+                </div>
               </div>
-              <p class="skill">Galician</p>
-              <p class="level">Native</p>
-              <div class="skill-bar-container">
-                <div class="skill-bar s100"></div>
+              <div class="skills-table">
+                <i class="devicon-html5-plain"></i>HTML
+                <div class="skill-bar-container">
+                  <div class="skill-bar s80"></div>
+                </div>
+                <i class="devicon-css3-plain"></i>CSS
+                <div class="skill-bar-container">
+                  <div class="skill-bar s80"></div>
+                </div>
               </div>
-              <p class="skill">English</p>
-              <p class="level">Fluent</p>
-              <div class="skill-bar-container">
-                <div class="skill-bar s80"></div>
+            </div>
+            <h5>Tools:</h5>
+            <div class="two-column">
+              <div class="skills-table">
+                <i class="devicon-arduino-plain"></i>Arduino
+                <div class="skill-bar-container">
+                  <div class="skill-bar s100"></div>
+                </div>
+                <i class="devicon-react-original"></i>React
+                <div class="skill-bar-container">
+                  <div class="skill-bar s80"></div>
+                </div>
+                <i class="devicon-git-plain"></i>Git
+                <div class="skill-bar-container">
+                  <div class="skill-bar s80"></div>
+                </div>
               </div>
-              <p class="skill">French</p>
-              <p class="level">Fluent</p>
-              <div class="skill-bar-container">
-                <div class="skill-bar s80"></div>
+              <div class="skills-table">
+                <i class="devicon-matlab-plain"></i>Matlab
+                <div class="skill-bar-container">
+                  <div class="skill-bar s80"></div>
+                </div>
+                <i class="devicon-nodejs-plain"></i>Node.js
+                <div class="skill-bar-container">
+                  <div class="skill-bar s60"></div>
+                </div>
+              </div>
+            </div>
+            <h5>Languages:</h5>
+            <div class="two-column">
+              <div class="skills-table">
+                <p class="skill">Spanish</p>
+                <p class="level">Native</p>
+                <div class="skill-bar-container">
+                  <div class="skill-bar s100"></div>
+                </div>
+                <p class="skill">Galician</p>
+                <p class="level">Native</p>
+                <div class="skill-bar-container">
+                  <div class="skill-bar s100"></div>
+                </div>
+              </div>
+              <div class="skills-table">
+                <p class="skill">English</p>
+                <p class="level">Fluent</p>
+                <div class="skill-bar-container">
+                  <div class="skill-bar s80"></div>
+                </div>
+                <p class="skill">French</p>
+                <p class="level">Fluent</p>
+                <div class="skill-bar-container">
+                  <div class="skill-bar s80"></div>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
-      </div>
-      <div class="section" id="experience">
-        <h4 class="section-header right-header">EXPERIENCE</h4>
-        <div class="left-align">
-          <ul class="custom-list" id="experience">
-            <li class="title">2022-2023 - Developer of <a href="https://www.behance.net/gallery/170303287/Mekanika" target="_blank">Mekanika</a></li>
-            <li class="institution"><a href="https://cabezapatata.com/" target="_blank">Cabeza Patata</a> (London)</li>
-            <li class="title">2020-2022 - Live Sound Technician </li>
-            <li class="institution">Freelance</li>
-            <li class="title">2017-2020 - Professional musician </li>
-            <li class="institution">Freelance</li>
-            <li class="title">2013-2017 - Doctorate</li>
-            <li class="institution">Institut de la Vision (Paris)</li>
-          </ul>
+        <div class="section" id="experience">
+          <h4 class="section-header right-header">EXPERIENCE</h4>
+          <div class="left-align">
+            <ul class="custom-list" id="experience">
+              <li class="title">
+                2022-2023 - Developer of
+                <a
+                  href="https://www.behance.net/gallery/170303287/Mekanika"
+                  target="_blank"
+                  >Mekanika</a
+                >
+              </li>
+              <li class="institution">
+                <a href="https://cabezapatata.com/" target="_blank"
+                  >Cabeza Patata</a
+                >
+                (London)
+              </li>
+              <li class="title">2020-2022 - Live Sound Technician</li>
+              <li class="institution">Freelance</li>
+              <li class="title">2017-2020 - Professional musician</li>
+              <li class="institution">Freelance</li>
+              <li class="title">2013-2017 - Doctorate</li>
+              <li class="institution">Institut de la Vision (Paris)</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="assets\js\curriculum.js"></script>
-  <script src="https://kit.fontawesome.com/7828a3c723.js" crossorigin="anonymous"></script>
-</body>
-
+    <script src="assets\js\curriculum.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7828a3c723.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

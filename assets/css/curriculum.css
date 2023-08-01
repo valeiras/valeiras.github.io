@@ -30,8 +30,8 @@ div.section {
 
 #left-container,
 #right-container {
-  padding-top: 40px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 25px;
 }
 
 div.section {
@@ -279,7 +279,7 @@ li.institution:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
--contact-list li:not(:last-child) {
+.contact-list li:not(:last-child) {
   margin-bottom: 3px;
 }
 
