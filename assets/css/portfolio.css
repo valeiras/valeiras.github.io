@@ -78,11 +78,11 @@ section:first-of-type {
 }
 
 section:last-of-type {
-  margin-bottom: 4rem;
+  margin-bottom: 0.5rem;
 }
 
 section#social-media {
-  height: 100px;
+  /* height: 100px; */
   bottom: 0;
 }
 /* --------------------------- Text classes --------------------------*/
