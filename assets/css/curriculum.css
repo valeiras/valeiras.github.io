@@ -207,8 +207,8 @@ p.long-text {
 
 .skill-bar.s100 {
   width: 100%;
-  /* animation-name: animate-s100;
-  animation-duration: 2.5s; */
+  animation-name: animate-s100;
+  animation-duration: 2.5s;
 }
 
 .skill-bar.s80 {
