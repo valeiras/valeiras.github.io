@@ -43,7 +43,7 @@ sections.forEach((selector) => {
   addBtnListener(selector);
 });
 
-const images = document.querySelectorAll("img:not(#header-img)");
+const images = document.querySelectorAll("img:not(#header-img):not(.img-link)");
 images.forEach((img) => {
   img.addEventListener("click", enterFullPage);
 });

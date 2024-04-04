@@ -112,6 +112,14 @@ h3 {
   font-size: 1.3rem;
 }
 
+h3#intro-text{
+  margin:0.2rem;
+}
+
+h3.subtitle{
+  margin-bottom: 0.5rem;
+}
+
 p {
   text-align: center;
   width: 80%;
@@ -137,6 +145,7 @@ p:last-child {
   font-size: 1.5rem;
   padding: 0 0.5rem;
 }
+
 /* --------------------------- Video classes --------------------------*/
 .video-iframe {
   aspect-ratio: 16/9;
@@ -171,8 +180,11 @@ p:last-child {
 }
 
 /* --------------------------- Image classes --------------------------*/
-img:not(#header-img) {
+img:not(#header-img):not(.img-link) {
   cursor: zoom-in;
+}
+ 
+img{
   padding: 2px;
   transition: 0.2s;
 }
@@ -393,3 +405,9 @@ button.read-more-less a {
 #social-media {
   margin-top: 2rem;
 }
+
+/* Full-stack */
+.webpage-container {
+}
+
+.
