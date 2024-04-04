@@ -287,7 +287,6 @@ li.institution:not(:last-child) {
   margin-bottom: 3px;
 }
 
-#generate-btn,
 #download-btn {
   padding: 10px;
   color: var(--dark-blue);
@@ -298,15 +297,6 @@ li.institution:not(:last-child) {
   transition: 0.5s;
   box-shadow: 0 0 1px;
   margin: 20px;
-}
-
-#download-btn {
-  display: none;
-}
-
-#generate-btn {
-  /* visibility: hidden; */
-  position: absolute;
 }
 
 #download-btn:hover {
