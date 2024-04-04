@@ -1,48 +1,52 @@
+const imgGallery = document.getElementById("img-gallery");
+
 function exitFullpage() {
-  //$('#img-gallery').removeClass('active');
-  $('#img-gallery').removeAttr('style');
-  $('#img-gallery').toggleClass(['active', 'inactive']);
-  $('body').css('overflow-y', 'visible');
+  imgGallery?.removeAttribute("style");
+  imgGallery?.classList.toggle("active");
+  imgGallery?.classList.toggle("inactive");
+  document.body.style.overflowY = "visible";
 }
 
 function enterFullPage() {
-  $('#img-gallery').toggleClass(['active', 'inactive']);
-  $('#img-gallery').css({
-    backgroundImage: 'url(' + this.src + ')',
-    top: window.scrollY + 'px',
-    height: window.outerHeight + 'px',
-  });
-  $('body').css('overflow-y', 'hidden');
-}
+  imgGallery?.classList.toggle("active");
+  imgGallery?.classList.toggle("inactive");
 
-$('img:not(#header-img)').on('click', enterFullPage);
-$('#img-gallery').on('click', exitFullpage);
-$(document).on('keydown', exitFullpage);
+  imgGallery.style.backgroundImage = "url(" + this.src + ")";
+  imgGallery.style.top = window.scrollY + "px";
+  imgGallery.style.height = window.outerHeight + "px";
+  document.body.style.overflowY = "hidden";
+}
 
 // Adjust the top margin of the first section, so there is no content overlap:
-const firstSection = $('section:first-of-type');
-const navBar = $('#nav-bar');
+function locateFirstSection() {
+  const firstSection = document.querySelector("section:first-of-type");
+  const navBarHeight = document.querySelector("#nav-bar").getBoundingClientRect().height;
+  firstSection.style.marginTop = navBarHeight + 32 + "px";
+  firstSection.style.scrollMarginTop = navBarHeight + "px";
+}
 
 function addBtnListener(selector) {
-  $(`#btn-${selector}-more`).on('click', () => {
-    $(`#btn-${selector}-more`).css({ visibility: 'hidden' });
-    $(`#${selector}-2`).css({ display: 'block' });
+  document.querySelector(`#btn-${selector}-more`).addEventListener("click", () => {
+    document.querySelector(`#btn-${selector}-more`).style.visibility = "hidden";
+    document.querySelector(`#${selector}-2`).style.display = "block";
   });
 
-  $(`#btn-${selector}-less`).on('click', () => {
-    $(`#btn-${selector}-more`).css({ visibility: 'visible' });
-    $(`#${selector}-2`).css({ display: 'none' });
+  document.querySelector(`#btn-${selector}-less`).addEventListener("click", () => {
+    document.querySelector(`#btn-${selector}-more`).style.visibility = "visible";
+    document.querySelector(`#${selector}-2`).style.display = "none";
   });
 }
 
-const sections = [
-  'mekanika',
-  'pequena-banda-robotica',
-  'household-music',
-  'phd',
-  'music',
-  'dald',
-];
+window.addEventListener("resize", locateFirstSection);
+const sections = ["full-stack", "mekanika", "pequena-banda-robotica", "household-music", "phd", "music", "dald"];
 sections.forEach((selector) => {
   addBtnListener(selector);
 });
+
+const images = document.querySelectorAll("img:not(#header-img)");
+images.forEach((img) => {
+  img.addEventListener("click", enterFullPage);
+});
+imgGallery.addEventListener("click", exitFullpage);
+document.addEventListener("keydown", exitFullpage);
+locateFirstSection();

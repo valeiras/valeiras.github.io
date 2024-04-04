@@ -70,13 +70,6 @@ section {
   flex: auto;
 }
 
-section:first-of-type {
-  position: relative;
-  top: 5rem;
-  scroll-margin-top: 5rem;
-  margin-bottom: 3rem;
-}
-
 section:last-of-type {
   margin-bottom: 0.5rem;
 }
@@ -342,7 +335,7 @@ ul.no-bullets {
 }
 
 ul.dashes {
-  list-style-type: '-';
+  list-style-type: "-";
   list-style-position: outside;
 }
 
@@ -387,6 +380,7 @@ button.read-more-less a {
   text-decoration: none;
 }
 
+#full-stack-2,
 #mekanika-2,
 #pequena-banda-robotica-2,
 #household-music-2,
