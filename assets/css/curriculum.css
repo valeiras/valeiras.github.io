@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  font-size: 18px;
+}
+
 body {
   background-color: #eee;
   overflow: auto;
@@ -12,7 +16,7 @@ body {
   display: flex;
   margin: auto;
   width: 800px;
-  height: 1122px;
+  height: 1131px;
   background-color: #fff;
   border: 1px solid #999;
   flex-flow: row wrap;
@@ -30,8 +34,8 @@ div.section {
 
 #left-container,
 #right-container {
-  padding-top: 30px;
-  padding-bottom: 25px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 div.section {
@@ -95,7 +99,7 @@ h5:first-of-type {
 h4.section-header {
   font-size: 1.2rem;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 1rem;
 }
 
 h4.right-header {
@@ -203,8 +207,8 @@ p.long-text {
 
 .skill-bar.s100 {
   width: 100%;
-  animation-name: animate-s100;
-  animation-duration: 2.5s;
+  /* animation-name: animate-s100;
+  animation-duration: 2.5s; */
 }
 
 .skill-bar.s80 {
@@ -296,8 +300,12 @@ li.institution:not(:last-child) {
   margin: 20px;
 }
 
+#download-btn {
+  display: none;
+}
+
 #generate-btn {
-  visibility: hidden;
+  /* visibility: hidden; */
   position: absolute;
 }
 
