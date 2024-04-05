@@ -1,16 +1,15 @@
 {
   "name": "valeiras.github.io",
-  "version": "1.0.0",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "description": "Repository containing my [personal gitHub webpage](https://valeiras.github.io/), where you can find some of my latest work and an updated CV.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "puppeteer-html-pdf": "^3.0.2"
+  "devDependencies": {
+    "vite": "^5.2.0",
+    "vite-plugin-inspect": "^0.8.3"
   }
 }
