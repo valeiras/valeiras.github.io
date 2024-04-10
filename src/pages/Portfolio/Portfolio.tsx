@@ -190,7 +190,7 @@ const Wrapper = styled.div`
     transition: 0.2s;
   }
 
-  img:hover {
+  img:not(#header-img):not(.img-link):not(.project-img):hover {
     transform: scale(1.01);
   }
 
