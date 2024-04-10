@@ -7,7 +7,7 @@ const FullStack: React.FC = () => {
     <Wrapper id="full-stack">
       <h1 className="section-title">Full-stack developer</h1>
       <p>
-        As a full-stack developer I have worked in a number of projects. Many of these cannot be shared, as the code
+        As a full-stack developer I have worked in a number of projects. Many of them cannot be shared, as the code
         remains private, but here is some of the stuff I can show you:
       </p>
       <FullStackProjects />

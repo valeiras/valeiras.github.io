@@ -5,6 +5,7 @@ import { TbWorldWww } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa6";
 
 import imgTualuce from "../../assets/images/Full-stack/Tualuce-1.png";
+import imgPortfolio from "../../assets/images/Full-stack/Portfolio.png";
 import imgAcontractluz from "../../assets/images/Full-stack/Acontractluz-2.png";
 import imgCeciRodriguezFotos from "../../assets/images/Full-stack/CeciRodriguezFotos.png";
 import imgRichEditor from "../../assets/images/Full-stack/RichEditor.png";
@@ -20,6 +21,21 @@ const FullStackProjects: React.FC = () => {
       img: imgTualuce,
     },
     {
+      projectName: "This portfolio",
+      description: `This very portfolio is a React project written in Typescript and hosted in gitHub pages`,
+      projectUrl: "https://valeiras.github.io/#/portfolio/full-stack",
+      gitHubUrl: "https://github.com/valeiras/valeiras.github.io",
+      img: imgPortfolio,
+    },
+    {
+      projectName: "Rich text editor",
+      description: `Rich text editor created using Lexical and React. 
+        The editor is then provided as a web component, so it can be later included in any project using whichever framework.`,
+      projectUrl: "https://utils.ennubo.es/editor/",
+      gitHubUrl: "https://github.com/valeiras/react-rich-text-editor",
+      img: imgRichEditor,
+    },
+    {
       projectName: "Ceci Rodríguez Fotos",
       description: `Personal portfolio webpage for Spanish photographer Ceci Rodríguez. This project includes a private secure area
       that allows the owner to upload new pictures and update the contents of the webpage`,
@@ -33,14 +49,6 @@ const FullStackProjects: React.FC = () => {
         It includes a personal client area and access the full manufacturer's catalog from its database.`,
       projectUrl: "https://www.acontract-luz.com/",
       img: imgAcontractluz,
-    },
-    {
-      projectName: "Rich text editor",
-      description: `Rich text editor created using Lexical and React. 
-        The editor is then provided as a web component, so it can be later included in any project using whichever framework.`,
-      projectUrl: "https://utils.ennubo.es/editor/",
-      gitHubUrl: "https://github.com/valeiras/react-rich-text-editor",
-      img: imgRichEditor,
     },
   ];
 
