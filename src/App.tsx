@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import { Home, Curriculum, Portfolio } from "./pages/";
 import {
   Mekanika,
@@ -11,10 +11,11 @@ import {
 } from "./pages/Portfolio";
 
 const App: React.FC = () => {
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: <Home />,
+      children: [],
     },
     {
       path: "/curriculum",
