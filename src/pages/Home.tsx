@@ -12,8 +12,8 @@ const Home: React.FC = () => {
         <h1>David Reverter Valeiras</h1>
       </div>
       <div className="card-container">
-        <Card link="/#portfolio/full-stack" title="Portfolio" img={portfolioImg} />
-        <Card link="/#curriculum" title="CV" img={cvImg} />
+        <Card link="/#/portfolio/full-stack" title="Portfolio" img={portfolioImg} />
+        <Card link="/#/curriculum" title="CV" img={cvImg} />
       </div>
 
       <div className="footer-container">
