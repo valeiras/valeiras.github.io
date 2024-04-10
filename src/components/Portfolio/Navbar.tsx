@@ -9,9 +9,9 @@ import { usePortofolioContext } from "./context";
 const navbarItems: { text: string; section: string }[] = [
   { text: "Full-stack developer", section: "full-stack" },
   { text: "Mekanika", section: "mekanika" },
-  { text: "Pequeña Banda Robótica", section: "pequena-banda-robotica" },
-  // { text: "Household Music", section: "household-music" },
   { text: "PhD - Neuromorphic Vision", section: "phd-neuromorphic-vision" },
+  { text: "Pequeña Banda Robótica", section: "pequena-banda-robotica" },
+  { text: "Household Music", section: "household-music" },
   // { text: "Music", section: "music" },
   // { text: "Choose your own song", section: "choose-your-own-song" },
 ];

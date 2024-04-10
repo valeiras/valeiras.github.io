@@ -14,10 +14,8 @@ const PhD: React.FC = () => {
       <div className="text-block">
         <p>
           I completed my PhD at the Institut de la Vision, Paris. The main focus of my research was the development of
-          new algorithms for neuromorphic event-based cameras.
-        </p>
-        <p>
-          My thesis, titled "Event-Based Detection and Tracking", is available to read
+          new algorithms for neuromorphic event-based cameras. My thesis, titled "Event-Based Detection and Tracking",
+          is available to read{" "}
           <Link to="https://theses.hal.science/tel-01727349" target="_blank">
             here.
           </Link>
