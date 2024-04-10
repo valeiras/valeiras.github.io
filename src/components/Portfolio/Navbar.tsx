@@ -11,7 +11,7 @@ const navbarItems: { text: string; section: string }[] = [
   { text: "Mekanika", section: "mekanika" },
   { text: "Pequeña Banda Robótica", section: "pequena-banda-robotica" },
   // { text: "Household Music", section: "household-music" },
-  // { text: "PhD - Neuromorphic Vision", section: "phd-neuromorphic-vision" },
+  { text: "PhD - Neuromorphic Vision", section: "phd-neuromorphic-vision" },
   // { text: "Music", section: "music" },
   // { text: "Choose your own song", section: "choose-your-own-song" },
 ];
