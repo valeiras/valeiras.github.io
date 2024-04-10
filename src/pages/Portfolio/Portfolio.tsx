@@ -117,6 +117,7 @@ const Wrapper = styled.div`
   }
 
   h2 {
+    margin-top: 1.5rem;
     margin-bottom: -1rem;
   }
 
@@ -152,6 +153,10 @@ const Wrapper = styled.div`
 
   .vertical-video {
     width: 30%;
+  }
+
+  .youtube-lite-container {
+    padding: 2px;
   }
 
   /* Laptop */
@@ -356,7 +361,7 @@ const Wrapper = styled.div`
     margin-bottom: 2rem;
   }
 
-  list-container ul {
+  .list-container ul {
     width: 40%;
   }
 
@@ -373,29 +378,6 @@ const Wrapper = styled.div`
 
   ul.dashes li {
     margin: 0 auto 1.5rem;
-  }
-
-  button.read-more-less {
-    background-color: transparent;
-    border: transparent;
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
-    /* margin-top: 1rem; */
-  }
-
-  button.read-more-less a {
-    text-decoration: none;
-  }
-
-  #full-stack-2,
-  #mekanika-2,
-  #pequena-banda-robotica-2,
-  #household-music-2,
-  #phd-2,
-  #music-2,
-  #dald-2 {
-    display: none;
   }
 
   #social-media {

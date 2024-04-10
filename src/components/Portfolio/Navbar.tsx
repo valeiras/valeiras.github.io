@@ -9,7 +9,7 @@ import { usePortofolioContext } from "./context";
 const navbarItems: { text: string; section: string }[] = [
   { text: "Full-stack developer", section: "full-stack" },
   { text: "Mekanika", section: "mekanika" },
-  // { text: "Pequeña Banda Robótica", section: "pequena-banda-robotica" },
+  { text: "Pequeña Banda Robótica", section: "pequena-banda-robotica" },
   // { text: "Household Music", section: "household-music" },
   // { text: "PhD - Neuromorphic Vision", section: "phd-neuromorphic-vision" },
   // { text: "Music", section: "music" },
@@ -48,7 +48,14 @@ const Navbar: React.FC<Props> = ({ navbarRef }) => {
         </li>
         {navbarItems.map(({ text, section }) => {
           return (
-            <NavLink to={section} className="nav-link nav-link-laptop" key={section}>
+            <NavLink
+              to={section}
+              className="nav-link nav-link-laptop"
+              key={section}
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
               {text}
             </NavLink>
           );
