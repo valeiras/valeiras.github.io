@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
+const BREAKPOINT = 992;
+
 type ImageSource = { src: string; alt: string };
-type Props = { imageSources: ImageSource[] };
+type RequiredProps = { imageSources: ImageSource[] };
+type OptionalProps = { isResponsive: boolean };
+type Props = RequiredProps & Partial<OptionalProps>;
+
 type ImageDimension = { id: number; width: number | null; height: number | null };
 
 const loadImages: (
@@ -40,7 +45,11 @@ const computeImageFractions: (dimensions: ImageDimension[]) => number[] = (dimen
   return fractions;
 };
 
-const ImageRow: React.FC<Props> = ({ imageSources }) => {
+const defaultProps: OptionalProps = {
+  isResponsive: true,
+};
+
+const ImageRow: React.FC<Props> = ({ imageSources, isResponsive }) => {
   const nbImages = imageSources.length;
   const initialDimensions: ImageDimension[] = [];
   for (let ii = 0; ii < nbImages; ii++) {
@@ -57,14 +66,19 @@ const ImageRow: React.FC<Props> = ({ imageSources }) => {
   if (imgLoadedCount < nbImages) return <></>;
 
   const fractions = computeImageFractions(dimensions);
+  console.log(window.innerWidth);
+  console.log(isResponsive);
   return (
     <Wrapper>
       {imageSources.map(({ src, alt }, id) => {
-        return <img src={src} alt={alt} width={`${100 * fractions[id]}%`} key={id} />;
+        const width = !isResponsive || window.innerWidth > BREAKPOINT ? `${100 * fractions[id]}%` : `100%`;
+        return <img src={src} alt={alt} width={width} key={id} />;
       })}
     </Wrapper>
   );
 };
+
+ImageRow.defaultProps = defaultProps;
 
 const Wrapper = styled.div`
   width: 100%;
