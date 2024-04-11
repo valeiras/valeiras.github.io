@@ -56,12 +56,23 @@ const ImageRow: React.FC<Props> = ({ imageSources, isResponsive }) => {
     initialDimensions.push({ id: ii, width: null, height: null });
   }
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [dimensions, setDimensions] = useState<ImageDimension[]>(initialDimensions);
   const [imgLoadedCount, setImgLoadedCount] = useState<number>(0);
 
   useEffect(() => {
     loadImages(setDimensions, setImgLoadedCount, imageSources);
   }, [imageSources]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   if (imgLoadedCount < nbImages) return <></>;
 
@@ -71,7 +82,7 @@ const ImageRow: React.FC<Props> = ({ imageSources, isResponsive }) => {
   return (
     <Wrapper>
       {imageSources.map(({ src, alt }, id) => {
-        const width = !isResponsive || window.innerWidth > BREAKPOINT ? `${100 * fractions[id]}%` : `100%`;
+        const width = !isResponsive || windowWidth > BREAKPOINT ? `${100 * fractions[id]}%` : `100%`;
         return <img src={src} alt={alt} width={width} key={id} />;
       })}
     </Wrapper>
