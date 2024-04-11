@@ -190,15 +190,8 @@ const Wrapper = styled.div`
     transition: 0.2s;
   }
 
-  img:not(#header-img):not(.img-link):not(.project-img):hover {
+  img:not(#header-img):not(.project-img):hover {
     transform: scale(1.01);
-  }
-
-  .img-row {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
   }
 
   .img-full-width {
@@ -206,109 +199,8 @@ const Wrapper = styled.div`
     max-height: 100%;
   }
 
-  #img-mb {
-    width: 23.42%;
-  }
-
-  #img-stage {
-    width: 76.08%;
-  }
-
-  #img-gl {
-    width: 68.75%;
-  }
-
-  #img-drummer {
-    width: 30.75%;
-  }
-
   .img-half {
     width: 50%;
-  }
-
-  .img-third {
-    width: 33.33%;
-  }
-
-  #img-patch {
-    width: 30.52%;
-  }
-
-  #img-HH {
-    width: 68.98%;
-  }
-
-  .img-glmb2 {
-    width: 23.166%;
-  }
-
-  #img-band {
-    width: 52.233%;
-  }
-
-  #img-flag {
-    width: 14.88%;
-  }
-
-  #img-front {
-    width: 43.47%;
-  }
-
-  #img-dr2 {
-    width: 41.65%;
-  }
-
-  #img-david {
-    width: 57.53%;
-  }
-
-  #img-stage2 {
-    width: 42.47%;
-  }
-
-  #img-katie {
-    width: 51.79%;
-  }
-
-  #img-drummer-head {
-    width: 24.1%;
-  }
-
-  #img-mb-head {
-    width: 24.1%;
-  }
-
-  #img-kid1 {
-    width: 53.09%;
-  }
-
-  #img-kid2 {
-    width: 46.91%;
-  }
-
-  @media (max-width: 768px) {
-    #img-mb,
-    #img-stage,
-    #img-gl,
-    #img-drummer,
-    .img-half,
-    .img-third,
-    #img-patch,
-    #img-HH,
-    .img-glmb2,
-    #img-band,
-    #img-flag,
-    #img-front,
-    #img-dr2,
-    #img-david,
-    #img-stage2,
-    #img-katie,
-    #img-drummer-head,
-    #img-mb-head,
-    #img-kid1,
-    #img-kid2 {
-      width: 100%;
-    }
   }
 
   #img-gallery {

@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import ImageRow from "./../../components/Portfolio/ImageRow";
+
 import mekanikaOnPictoplasmaImg from "../../assets/images/Mekanika/Mekanika-on-Pictoplasma.jpg";
 import musicBoxImg from "../../assets/images/Mekanika/Music-Box.jpg";
 import stageImg from "../../assets/images/Mekanika/Stage.jpg";
@@ -57,15 +59,18 @@ const Mekanika: React.FC = () => {
         </p>
       </div>
 
-      <div className="img-row">
-        <img loading="lazy" src={musicBoxImg} id="img-mb" alt="Music Box Player" />
-        <img loading="lazy" src={stageImg} id="img-stage" alt="The Stage at Pictoplasma" />
-      </div>
-
-      <div className="img-row">
-        <img loading="lazy" src={glockenspielImg} id="img-gl" alt="Glockenspiel" />
-        <img loading="lazy" src={drummerImg} id="img-drummer" alt="The Drummer" />
-      </div>
+      <ImageRow
+        imageSources={[
+          { src: musicBoxImg, alt: "Music Box Player" },
+          { src: stageImg, alt: "The Stage at Pictoplasma" },
+        ]}
+      />
+      <ImageRow
+        imageSources={[
+          { src: glockenspielImg, alt: "Glockenspiel" },
+          { src: drummerImg, alt: "The Drummer" },
+        ]}
+      />
 
       <div className="text-block">
         <p>
@@ -75,14 +80,18 @@ const Mekanika: React.FC = () => {
         </p>
       </div>
 
-      <div className="img-row">
-        <img loading="lazy" src={mekanikaFromLeftImg} className="img-half" alt="Mekanika playing" />
-        <img loading="lazy" src={mekanikaFromRightImg} className="img-half" alt="Mekanika playing" />
-      </div>
-      <div className="img-row">
-        <img loading="lazy" src={patchImg} id="img-patch" alt="Patch on the character" />
-        <img loading="lazy" src={hiHatImg} id="img-HH" alt="HiHat" />
-      </div>
+      <ImageRow
+        imageSources={[
+          { src: mekanikaFromLeftImg, alt: "Mekanika playing" },
+          { src: mekanikaFromRightImg, alt: "Mekanika playing" },
+        ]}
+      />
+      <ImageRow
+        imageSources={[
+          { src: patchImg, alt: "Patch on the character" },
+          { src: hiHatImg, alt: "HiHat" },
+        ]}
+      />
 
       <div className="text-block">
         <p>
@@ -101,11 +110,13 @@ const Mekanika: React.FC = () => {
         </p>
       </div>
 
-      <div className="img-row">
-        <img loading="lazy" src={glockenspiel2Img} className="img-glmb2" alt="Glockenspiel player" />
-        <img loading="lazy" src={musicBox2Img} className="img-glmb2" alt="Music box player" />
-        <img loading="lazy" src={bandImg} id="img-band" alt="Music box player" />
-      </div>
+      <ImageRow
+        imageSources={[
+          { src: glockenspiel2Img, alt: "Glockenspiel player" },
+          { src: musicBox2Img, alt: "Music box player" },
+          { src: bandImg, alt: "The band playing" },
+        ]}
+      />
 
       <div className="text-block">
         <p>
@@ -114,16 +125,20 @@ const Mekanika: React.FC = () => {
         </p>
       </div>
 
-      <div className="img-row">
-        <img loading="lazy" src={flagImg} id="img-flag" alt="Embroidered flag" />
-        <img loading="lazy" src={mekanikaFromTheFrontImg} id="img-front" alt="Mekanika playing" />
-        <img loading="lazy" src={drummerCloseupImg} id="img-dr2" alt="Drummer" />
-      </div>
+      <ImageRow
+        imageSources={[
+          { src: flagImg, alt: "Embroidered flag" },
+          { src: mekanikaFromTheFrontImg, alt: "Mekanika playing" },
+          { src: drummerCloseupImg, alt: "Drummer" },
+        ]}
+      />
 
-      <div className="img-row">
-        <img loading="lazy" src={geniusAtWorkImg} id="img-david" alt="David working" />
-        <img loading="lazy" src={stageBuildersImg} id="img-stage2" alt="The stage being built" />
-      </div>
+      <ImageRow
+        imageSources={[
+          { src: geniusAtWorkImg, alt: "David working" },
+          { src: stageBuildersImg, alt: "The stage being built" },
+        ]}
+      />
 
       <div className="text-block">
         <p>
@@ -133,16 +148,20 @@ const Mekanika: React.FC = () => {
         </p>
       </div>
 
-      <div className="img-row">
-        <img loading="lazy" src={katieWithDrummerImg} id="img-katie" alt="Katie working on the drummer" />
-        <img loading="lazy" src={drummerHeadImg} id="img-drummer-head" alt="Head of the drummer" />
-        <img loading="lazy" src={mbHeadImg} id="img-mb-head" alt="Head of the music box player" />
-      </div>
+      <ImageRow
+        imageSources={[
+          { src: katieWithDrummerImg, alt: "Katie working on the drummer" },
+          { src: drummerHeadImg, alt: "Head of the drummer" },
+          { src: mbHeadImg, alt: "Head of the music box player" },
+        ]}
+      />
 
-      <div className="img-row">
-        <img loading="lazy" src={person1PlayingImg} className="img-half" alt="Somebody playing with the band" />
-        <img loading="lazy" src={person2PlayingImg} className="img-half" alt="Somebody playing with the band" />
-      </div>
+      <ImageRow
+        imageSources={[
+          { src: person1PlayingImg, alt: "Somebody playing with the band" },
+          { src: person2PlayingImg, alt: "Somebody playing with the band" },
+        ]}
+      />
 
       <div className="text-block">
         <p>
@@ -152,11 +171,12 @@ const Mekanika: React.FC = () => {
         </p>
       </div>
 
-      <div className="img-row">
-        <img loading="lazy" src={kid1PlayingImg} id="img-kid1" alt="A kid playing with the band" />
-        <img loading="lazy" src={kid2PlayingImg} id="img-kid2" alt="A kid playing with the band" />
-      </div>
-      <br />
+      <ImageRow
+        imageSources={[
+          { src: kid1PlayingImg, alt: "A kid playing with the band" },
+          { src: kid2PlayingImg, alt: "A kid playing with the band" },
+        ]}
+      />
     </Wrapper>
   );
 };

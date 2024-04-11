@@ -11,6 +11,7 @@ import imgCeciRodriguezFotos from "../../assets/images/Full-stack/CeciRodriguezF
 import imgRichEditor from "../../assets/images/Full-stack/RichEditor.png";
 
 import { Link } from "react-router-dom";
+import { nanoid } from "nanoid";
 
 const FullStackProjects: React.FC = () => {
   const projects: Project[] = [
@@ -22,7 +23,7 @@ const FullStackProjects: React.FC = () => {
     },
     {
       projectName: "This portfolio",
-      description: `This very portfolio is a React project written in Typescript and hosted in gitHub pages`,
+      description: `This very portfolio is a React project, written in Typescript and hosted in gitHub pages-`,
       projectUrl: "https://valeiras.github.io/#/portfolio/full-stack",
       gitHubUrl: "https://github.com/valeiras/valeiras.github.io",
       img: imgPortfolio,
@@ -38,7 +39,7 @@ const FullStackProjects: React.FC = () => {
     {
       projectName: "Ceci Rodríguez Fotos",
       description: `Personal portfolio webpage for Spanish photographer Ceci Rodríguez. This project includes a private secure area
-      that allows the owner to upload new pictures and update the contents of the webpage`,
+      that allows the owner to upload new pictures and update the contents of the webpage.`,
       projectUrl: "https://www.ceci-rodriguez-fotos.es/",
       gitHubUrl: "https://github.com/valeiras/ceci-rod-fotos-fullstack",
       img: imgCeciRodriguezFotos,
@@ -56,9 +57,11 @@ const FullStackProjects: React.FC = () => {
     <Wrapper>
       {projects.map(({ projectName, description, projectUrl, gitHubUrl, img }) => {
         return (
-          <div className="project-container">
+          <div className="project-container" key={nanoid()}>
             <h3 className="project-name">{projectName}</h3>
-            <img src={img} alt={projectName} className="project-img" />
+            <Link to={projectUrl} target="_blank">
+              <img src={img} alt={projectName} className="project-img" />
+            </Link>
             <p className="project-description">{description}</p>
             <div className="project-links">
               <Link to={projectUrl} target="_blank">
