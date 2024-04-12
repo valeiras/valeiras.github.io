@@ -29,7 +29,6 @@ const Portfolio: React.FC = () => {
       <Wrapper>
         <Navbar navbarRef={navbarRef} />
 
-        <div id="img-gallery" className="inactive"></div>
         <div id="spacer" ref={spacerRef}></div>
 
         <Outlet />
@@ -181,9 +180,9 @@ const Wrapper = styled.div`
   }
 
   /* --------------------------- Image classes --------------------------*/
-  /* img:not(#header-img):not(.img-link) {
+  img:not(#header-img):not(.img-link) {
     cursor: zoom-in;
-  } */
+  }
 
   img {
     padding: 2px;
@@ -201,30 +200,6 @@ const Wrapper = styled.div`
 
   .img-half {
     width: 50%;
-  }
-
-  #img-gallery {
-    position: absolute;
-    z-index: 9999;
-    left: 0;
-    margin: 0;
-    background-size: contain;
-    background-repeat: no-repeat no-repeat;
-    background-position: center center;
-    background-color: rgba(55, 55, 55, 0.9);
-    transition: 0.5s;
-    cursor: zoom-out;
-  }
-
-  #img-gallery.inactive {
-    display: none;
-    width: 0;
-    height: 0;
-  }
-
-  #img-gallery.active {
-    display: block;
-    width: 100vw;
   }
 
   /* --------------------------- Lists --------------------------*/

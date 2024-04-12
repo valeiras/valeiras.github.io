@@ -27,7 +27,6 @@ const Navbar: React.FC<Props> = ({ navbarRef }) => {
 
   const toggleLinks = () => {
     setShowLinks(!showLinks);
-    console.log("Toggling links");
   };
 
   const linkStyles =

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { ImageSource } from "../../types";
 
 const BREAKPOINT = 992;
 
-type ImageSource = { src: string; alt: string };
 type RequiredProps = { imageSources: ImageSource[] };
-type OptionalProps = { isResponsive: boolean };
+type OptionalProps = { isResponsive: boolean; handleClick: (src: string) => void };
 type Props = RequiredProps & Partial<OptionalProps>;
 
 type ImageDimension = { id: number; width: number | null; height: number | null };
@@ -47,9 +47,10 @@ const computeImageFractions: (dimensions: ImageDimension[]) => number[] = (dimen
 
 const defaultProps: OptionalProps = {
   isResponsive: true,
+  handleClick: () => {},
 };
 
-const ImageRow: React.FC<Props> = ({ imageSources, isResponsive }) => {
+const ImageRow: React.FC<Props> = ({ imageSources, isResponsive, handleClick }) => {
   const nbImages = imageSources.length;
   const initialDimensions: ImageDimension[] = [];
   for (let ii = 0; ii < nbImages; ii++) {
@@ -77,13 +78,21 @@ const ImageRow: React.FC<Props> = ({ imageSources, isResponsive }) => {
   if (imgLoadedCount < nbImages) return <></>;
 
   const fractions = computeImageFractions(dimensions);
-  console.log(window.innerWidth);
-  console.log(isResponsive);
   return (
     <Wrapper>
       {imageSources.map(({ src, alt }, id) => {
         const width = !isResponsive || windowWidth > BREAKPOINT ? `${100 * fractions[id]}%` : `100%`;
-        return <img src={src} alt={alt} width={width} key={id} />;
+        return (
+          <img
+            src={src}
+            alt={alt}
+            width={width}
+            key={id}
+            onClick={() => {
+              if (handleClick) handleClick(src);
+            }}
+          />
+        );
       })}
     </Wrapper>
   );

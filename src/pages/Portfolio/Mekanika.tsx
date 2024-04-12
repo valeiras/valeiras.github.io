@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
 import ImageRow from "./../../components/Portfolio/ImageRow";
-
 import mekanikaOnPictoplasmaImg from "../../assets/images/Mekanika/Mekanika-on-Pictoplasma.jpg";
 import musicBoxImg from "../../assets/images/Mekanika/Music-Box.jpg";
 import stageImg from "../../assets/images/Mekanika/Stage.jpg";
@@ -28,10 +27,27 @@ import person1PlayingImg from "../../assets/images/Mekanika/person1-playing.gif"
 import person2PlayingImg from "../../assets/images/Mekanika/person2-playing.gif";
 import kid1PlayingImg from "../../assets/images/Mekanika/kid1-playing.gif";
 import kid2PlayingImg from "../../assets/images/Mekanika/kid2-playing.gif";
+import ImageGallery from "../../components/Portfolio/ImageGallery";
 
 const Mekanika: React.FC = () => {
+  const [isGalleryActive, setIsGalleryActive] = useState<boolean>(false);
+  const galleryRef = useRef<HTMLDivElement>(null);
+
+  const handleClick = (src: string) => {
+    if (galleryRef.current) {
+      console.log;
+      setIsGalleryActive(true);
+      galleryRef.current.style.backgroundImage = "url(" + src + ")";
+      galleryRef.current.style.top = window.scrollY + "px";
+      galleryRef.current.style.height = window.outerHeight + "px";
+      document.body.style.overflowY = "hidden";
+    }
+  };
+
   return (
     <Wrapper id="mekanika">
+      <ImageGallery isGalleryActive={isGalleryActive} setIsGalleryActive={setIsGalleryActive} galleryRef={galleryRef} />
+
       <h1 className="section-title">Mekanika</h1>
 
       <iframe
@@ -41,8 +57,6 @@ const Mekanika: React.FC = () => {
         frameBorder="0"
       ></iframe>
 
-      {/* <Vimeo video="829882661" className="vimeo-embed" /> */}
-
       <div className="text-block">
         <p>
           Mekanika is the world's first robotic puppet rock band, conceived as a 'family project'; a collaboration
@@ -50,7 +64,10 @@ const Mekanika: React.FC = () => {
         </p>
       </div>
 
-      <img loading="lazy" src={mekanikaOnPictoplasmaImg} alt="Mekanika on Pictoplasma" className="img-full-width" />
+      <ImageRow
+        handleClick={handleClick}
+        imageSources={[{ src: mekanikaOnPictoplasmaImg, alt: "Mekanika on Pictoplasma" }]}
+      />
 
       <div>
         <p>
@@ -60,12 +77,14 @@ const Mekanika: React.FC = () => {
       </div>
 
       <ImageRow
+        handleClick={handleClick}
         imageSources={[
           { src: musicBoxImg, alt: "Music Box Player" },
           { src: stageImg, alt: "The Stage at Pictoplasma" },
         ]}
       />
       <ImageRow
+        handleClick={handleClick}
         imageSources={[
           { src: glockenspielImg, alt: "Glockenspiel" },
           { src: drummerImg, alt: "The Drummer" },
@@ -81,12 +100,14 @@ const Mekanika: React.FC = () => {
       </div>
 
       <ImageRow
+        handleClick={handleClick}
         imageSources={[
           { src: mekanikaFromLeftImg, alt: "Mekanika playing" },
           { src: mekanikaFromRightImg, alt: "Mekanika playing" },
         ]}
       />
       <ImageRow
+        handleClick={handleClick}
         imageSources={[
           { src: patchImg, alt: "Patch on the character" },
           { src: hiHatImg, alt: "HiHat" },
@@ -111,6 +132,7 @@ const Mekanika: React.FC = () => {
       </div>
 
       <ImageRow
+        handleClick={handleClick}
         imageSources={[
           { src: glockenspiel2Img, alt: "Glockenspiel player" },
           { src: musicBox2Img, alt: "Music box player" },
@@ -126,6 +148,7 @@ const Mekanika: React.FC = () => {
       </div>
 
       <ImageRow
+        handleClick={handleClick}
         imageSources={[
           { src: flagImg, alt: "Embroidered flag" },
           { src: mekanikaFromTheFrontImg, alt: "Mekanika playing" },
@@ -134,6 +157,7 @@ const Mekanika: React.FC = () => {
       />
 
       <ImageRow
+        handleClick={handleClick}
         imageSources={[
           { src: geniusAtWorkImg, alt: "David working" },
           { src: stageBuildersImg, alt: "The stage being built" },
@@ -149,6 +173,7 @@ const Mekanika: React.FC = () => {
       </div>
 
       <ImageRow
+        handleClick={handleClick}
         imageSources={[
           { src: katieWithDrummerImg, alt: "Katie working on the drummer" },
           { src: drummerHeadImg, alt: "Head of the drummer" },
@@ -157,6 +182,7 @@ const Mekanika: React.FC = () => {
       />
 
       <ImageRow
+        handleClick={handleClick}
         imageSources={[
           { src: person1PlayingImg, alt: "Somebody playing with the band" },
           { src: person2PlayingImg, alt: "Somebody playing with the band" },
@@ -172,6 +198,7 @@ const Mekanika: React.FC = () => {
       </div>
 
       <ImageRow
+        handleClick={handleClick}
         imageSources={[
           { src: kid1PlayingImg, alt: "A kid playing with the band" },
           { src: kid2PlayingImg, alt: "A kid playing with the band" },

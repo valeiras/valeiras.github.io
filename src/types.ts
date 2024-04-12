@@ -5,3 +5,5 @@ export type Project = {
   gitHubUrl?: string;
   img: string;
 };
+
+export type ImageSource = { src: string; alt: string };
