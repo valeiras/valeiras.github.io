@@ -4,6 +4,7 @@ import Navbar from "../../components/Portfolio/Navbar";
 import { SocialMedia } from "../../components/Index";
 import { Outlet } from "react-router-dom";
 import { PortfolioContextProvider } from "../../components/Portfolio/context";
+import ImageGallery from "../../components/Portfolio/ImageGallery";
 
 const Portfolio: React.FC = () => {
   const navbarRef = useRef<HTMLUListElement>(null);
@@ -28,7 +29,7 @@ const Portfolio: React.FC = () => {
     <PortfolioContextProvider>
       <Wrapper>
         <Navbar navbarRef={navbarRef} />
-
+        <ImageGallery />
         <div id="spacer" ref={spacerRef}></div>
 
         <Outlet />
@@ -180,7 +181,7 @@ const Wrapper = styled.div`
   }
 
   /* --------------------------- Image classes --------------------------*/
-  img:not(#header-img):not(.img-link) {
+  img:not(#header-img):not(.project-img) {
     cursor: zoom-in;
   }
 

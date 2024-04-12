@@ -21,7 +21,10 @@ type Props = {
 };
 
 const Navbar: React.FC<Props> = ({ navbarRef }) => {
-  const { showLinks, setShowLinks } = usePortofolioContext();
+  const context = usePortofolioContext();
+  if (context === null) throw new Error("Porfolio context if missing");
+
+  const { showLinks, setShowLinks } = context;
   const linksContainerRef = useRef<HTMLDivElement>(null);
   const linksRef = useRef<HTMLUListElement>(null);
 

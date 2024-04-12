@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+import { usePortofolioContext } from "./context";
 
-type Props = {
-  isGalleryActive: boolean;
-  setIsGalleryActive: React.Dispatch<React.SetStateAction<boolean>>;
-  galleryRef: React.RefObject<HTMLDivElement>;
-};
-
-const ImageGallery: React.FC<Props> = ({ isGalleryActive, setIsGalleryActive, galleryRef }) => {
+const ImageGallery: React.FC = () => {
+  const context = usePortofolioContext();
+  if (context === null) throw new Error("Porfolio context if missing");
+  const { isGalleryActive, setIsGalleryActive, galleryRef } = context;
   const exitFullpage = () => {
     if (galleryRef.current) {
       galleryRef.current.removeAttribute("style");

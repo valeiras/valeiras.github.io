@@ -11,8 +11,14 @@ import prettierVocalImg from "../../assets/images/PBR/Prettier-vocal-section.jpg
 import harryVid from "../../assets/videos/PBR/Harry.mp4";
 import soundProcessingVid from "../../assets/videos/PBR/Sound-processing.mp4";
 import vocalSectionVid from "../../assets/videos/PBR/Vocal-section.mp4";
+import { usePortofolioContext } from "../../components/Portfolio/context";
+import { ImageRow } from "../../components/Portfolio";
 
 const PequenaBandaRobotica: React.FC = () => {
+  const context = usePortofolioContext();
+  if (context === null) throw new Error("Porfolio context if missing");
+  const { handleImageClick } = context;
+
   return (
     <Wrapper id="pequena-banda-robotica">
       <h1 className="section-title">Pequeña Banda Robótica</h1>
@@ -24,9 +30,10 @@ const PequenaBandaRobotica: React.FC = () => {
         </p>
       </div>
 
-      <div className="img-row">
-        <img loading="lazy" src={prettierBandImg} alt="The Pequeña Banda Robotica" className="img-full-width" />
-      </div>
+      <ImageRow
+        handleClick={handleImageClick}
+        imageSources={[{ src: prettierBandImg, alt: "The Pequeña Banda Robotica" }]}
+      />
 
       <div className="text-block">
         <p>
@@ -35,11 +42,14 @@ const PequenaBandaRobotica: React.FC = () => {
         </p>
       </div>
 
-      <div className="img-row">
-        <img loading="lazy" src={prettierDrummerImg} className="img-third" alt="The drummer" />
-        <img loading="lazy" src={prettierGlockImg} className="img-third" alt="The glockenspiel" />
-        <img loading="lazy" src={prettierVocalImg} className="img-third" alt="The vocal section" />
-      </div>
+      <ImageRow
+        handleClick={handleImageClick}
+        imageSources={[
+          { src: prettierDrummerImg, alt: "The drummer" },
+          { src: prettierGlockImg, alt: "The glockenspiel" },
+          { src: prettierVocalImg, alt: "The vocal section" },
+        ]}
+      />
 
       <div className="youtube-lite-container">
         <LiteYouTubeEmbed id="dNsn_Z9T3mk" title="Mr Sandman" noCookie={true} />

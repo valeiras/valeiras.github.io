@@ -6,8 +6,13 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 import poseEstimationImg from "../..//assets/images/PhD/Pose-estimation.png";
+import { usePortofolioContext } from "../../components/Portfolio/context";
 
 const PhD: React.FC = () => {
+  const context = usePortofolioContext();
+  if (context === null) throw new Error("Porfolio context if missing");
+  const { handleImageClick } = context;
+
   return (
     <Wrapper id="phd-neuromorphic-vision">
       <h1 className="section-title">PhD - Neuromorphic Vision</h1>
@@ -70,7 +75,15 @@ const PhD: React.FC = () => {
         </li>
       </ul>
 
-      <img loading="lazy" src={poseEstimationImg} alt="3D Pose Estimation" className="img-half" />
+      <img
+        loading="lazy"
+        src={poseEstimationImg}
+        alt="3D Pose Estimation"
+        className="img-half"
+        onClick={() => {
+          handleImageClick(poseEstimationImg);
+        }}
+      />
 
       <h2>Conferences, Workshops and Stays</h2>
       <br />
