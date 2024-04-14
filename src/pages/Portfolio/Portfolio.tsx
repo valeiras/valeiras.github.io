@@ -84,21 +84,21 @@ const Wrapper = styled.div`
 
   /* --------------------------- Text classes --------------------------*/
   @media (max-width: 1400px) {
-    html {
+    & {
       font-size: 16px;
     }
   }
 
   /* Tablet */
   @media (max-width: 768px) {
-    html {
+    & {
       font-size: 14px;
     }
   }
 
   /* Cellphone */
   @media (max-width: 450px) {
-    html {
+    & {
       font-size: 14px;
     }
   }

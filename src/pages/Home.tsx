@@ -33,6 +33,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  padding: 0 2rem;
 
   .footer-container,
   .header-container {
@@ -48,8 +49,12 @@ const Wrapper = styled.div`
   h1 {
     text-align: center;
     width: 100%;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-top: 2rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    font-size: 2.5rem;
   }
 
   div.text-container {
