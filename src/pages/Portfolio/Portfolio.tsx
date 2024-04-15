@@ -83,23 +83,17 @@ const Wrapper = styled.div`
   }
 
   /* --------------------------- Text classes --------------------------*/
-  @media (max-width: 1400px) {
+  font-size: 14px;
+
+  @media (min-width: 1200px) {
     & {
       font-size: 16px;
     }
   }
 
-  /* Tablet */
-  @media (max-width: 768px) {
+  @media (min-width: 1400px) {
     & {
-      font-size: 14px;
-    }
-  }
-
-  /* Cellphone */
-  @media (max-width: 450px) {
-    & {
-      font-size: 14px;
+      font-size: 18px;
     }
   }
 
@@ -127,11 +121,21 @@ const Wrapper = styled.div`
   }
 
   p:first-child {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   p:last-child {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    p:first-child {
+      margin-top: 2rem;
+    }
+
+    p:last-child {
+      margin-bottom: 2rem;
+    }
   }
 
   .fa-brands {

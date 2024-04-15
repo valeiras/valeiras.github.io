@@ -32,13 +32,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
   padding: 0 2rem;
-
-  .footer-container,
-  .header-container {
-    min-height: var(--header-and-footer-height);
-  }
 
   .footer-container {
     display: flex;
@@ -50,27 +44,17 @@ const Wrapper = styled.div`
     text-align: center;
     width: 100%;
     font-size: 2rem;
-    padding-top: 2rem;
+    margin: 2rem 0 3rem;
   }
 
   @media screen and (min-width: 992px) {
-    font-size: 2.5rem;
+    h1 {
+      font-size: 2.5rem;
+    }
   }
 
   div.text-container {
     margin-bottom: 10px;
-  }
-
-  span.title {
-    width: 100%;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  img.snapshot {
-    width: 50%;
-    border-radius: 20px;
-    box-shadow: 1px 1px 3px var(--dark-blue);
   }
 
   a {
@@ -80,12 +64,13 @@ const Wrapper = styled.div`
   .card-container {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 3rem;
   }
 
   @media (min-width: 992px) {
     .card-container {
       flex-direction: row;
+      gap: 5rem;
     }
   }
 `;

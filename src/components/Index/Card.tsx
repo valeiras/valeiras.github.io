@@ -12,9 +12,7 @@ const Card: React.FC<Props> = ({ link, title, img }) => {
     <Wrapper>
       <a href={link} target="_blank">
         <div className="card">
-          <div className="text-container">
-            <span className="title">{title}</span>
-          </div>
+          <div className="title">{title}</div>
           <div className="img-container">
             <img className="snapshot" src={img} alt="Porfolio" />
           </div>
@@ -33,11 +31,30 @@ const Wrapper = styled.div`
   border-radius: 50px;
   text-align: center;
   transition: 0.3s;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 
   &:hover {
     transform: scale(1.05);
+  }
+
+  img.snapshot {
+    width: 65%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px var(--dark-blue);
+  }
+
+  @media screen and (min-width: 992px) {
+    img.snapshot {
+      width: 60%;
+    }
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 `;
 

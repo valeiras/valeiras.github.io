@@ -35,7 +35,11 @@ const Wrapper = styled.div`
   text-align: center;
   font-size: 1.5rem;
   padding-bottom: 1rem;
-  margin-top: 5rem;
+  margin-top: 4rem;
+
+  @media screen and (min-width: 992px) {
+    margin-top: 5rem;
+  }
 
   a {
     margin: 0 0.5rem;
