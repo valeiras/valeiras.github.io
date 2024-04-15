@@ -5,6 +5,7 @@ import { About, Contact, Education, Experience, Skills } from "../components/Cur
 
 const Curriculum: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const isPrint = false;
   useEffect(() => {
     const handleResize = () => {
       if (containerRef.current) {
@@ -44,13 +45,15 @@ const Curriculum: React.FC = () => {
       <div id="cv-container" ref={containerRef}>
         <div id="left-container">
           <img id="personal-photo" src={personalPhoto} alt="David Reverter Valeiras" />
-          <About />
+          <About isPrint={isPrint} />
 
-          <div id="btn-container">
-            <a href="/pdf/CV_David_Reverter_Valeiras.pdf" download>
-              <button id="download-btn">Download as pdf</button>
-            </a>
-          </div>
+          {!isPrint && (
+            <div id="btn-container">
+              <a href="/pdf/CV_David_Reverter_Valeiras.pdf" download>
+                <button id="download-btn">Download as pdf</button>
+              </a>
+            </div>
+          )}
 
           <Contact />
         </div>
