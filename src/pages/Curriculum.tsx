@@ -11,23 +11,23 @@ const Curriculum: React.FC = () => {
         const cvWidth = containerRef.current.getBoundingClientRect().width;
         const cvHeight = containerRef.current.getBoundingClientRect().height;
 
-        const windowWidth = document.documentElement.clientWidth;
-        const windowHeight = document.documentElement.clientHeight;
+        const windowWidth = window.innerWidth;
 
-        if (cvWidth > windowWidth) {
-          const r = windowWidth / cvWidth;
-          containerRef.current.style.transform = `scale(${r}) translateX(-50%)`;
+        const r = cvWidth / windowWidth;
+        if (r >= 1.0) {
+          containerRef.current.style.transform = `scale(${1 / r}) translateX(-50%)`;
           containerRef.current.style.transformOrigin = "0 0";
+          document.body.style.overflow = `hidden`;
 
-          const cvScaledHeight = r * cvHeight;
-          const documentHeight = Math.max(cvScaledHeight, windowHeight);
+          const cvScaledHeight = cvHeight / r;
+          const documentHeight = Math.max(cvScaledHeight, window.innerHeight);
 
-          document.body.style.height = `${documentHeight}px`;
           containerRef.current.style.top = `${(documentHeight - cvScaledHeight) / 2.0}px`;
         } else {
           containerRef.current.style.removeProperty("transform");
           containerRef.current.style.removeProperty("top");
           document.body.style.removeProperty("height");
+          document.body.style.removeProperty("overflow");
         }
       }
     };
