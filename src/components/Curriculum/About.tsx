@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { useCVContext } from "./context";
 
-type Props = { isPrint: boolean };
+const About: React.FC = () => {
+  const cvContext = useCVContext();
+  if (cvContext === null) throw new Error("CV context if missing");
+  const { isPrint } = cvContext;
 
-const About: React.FC<Props> = ({ isPrint }) => {
   return (
     <Wrapper className="cv-section" id="about">
       <h4 className="cv-section-header left-header">ABOUT</h4>
@@ -32,7 +35,7 @@ const About: React.FC<Props> = ({ isPrint }) => {
 };
 
 const Wrapper = styled.div`
-  flex-grow: 0;
+  flex-grow: 1;
 
   p.long-text {
     padding: 15px 30px 0;

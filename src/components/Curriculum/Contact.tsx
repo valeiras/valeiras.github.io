@@ -5,6 +5,8 @@ import { faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { type IconDefinition, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import HiddenEmail from "./HiddenEmail";
 import { nanoid } from "nanoid";
+import Email from "./Email";
+import { useCVContext } from "./context";
 
 const contactLinks: { link?: string; text: string; logo: IconDefinition }[] = [
   { text: "Granada (Spain)", logo: faLocationDot },
@@ -13,6 +15,10 @@ const contactLinks: { link?: string; text: string; logo: IconDefinition }[] = [
 ];
 
 const Contact: React.FC = () => {
+  const cvContext = useCVContext();
+  if (cvContext === null) throw new Error("CV context if missing");
+  const { isPrint } = cvContext;
+
   return (
     <Wrapper className="cv-section" id="contact">
       <h4 className="cv-section-header left-header">CONTACT</h4>
@@ -26,13 +32,15 @@ const Contact: React.FC = () => {
           );
         })}
         <FontAwesomeIcon icon={faEnvelope} className="right-aligned" />
-        <HiddenEmail />
+        {isPrint ? <Email /> : <HiddenEmail />}
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
+  font-size: 0.9rem;
+
   .contact-list {
     padding-top: 15px;
     width: 90%;
@@ -48,11 +56,6 @@ const Wrapper = styled.div`
   .custom-list#contacts {
     width: 80%;
   }
-  /*   
-  li {
-    display: flex;
-    align-items: center;
-  } */
 `;
 
 export default Contact;

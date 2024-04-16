@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { nanoid } from "nanoid";
+import { useCVContext } from "./context";
 
 type SkilllLevel = "100" | "80" | "60" | "40" | "20";
 
@@ -75,8 +76,12 @@ const languageToReactNode: (language: Language) => React.ReactNode = ({ name, le
 };
 
 const Skills: React.FC = () => {
+  const cvContext = useCVContext();
+  if (cvContext === null) throw new Error("CV context if missing");
+  const { isPrint } = cvContext;
+
   return (
-    <Wrapper className="cv-section" id="skills">
+    <Wrapper className="cv-section" id="skills" $isPrint={isPrint}>
       <h4 className="cv-section-header right-header">SKILLS</h4>
       <h5>Programming languages:</h5>
       <div className="two-column">
@@ -97,7 +102,7 @@ const Skills: React.FC = () => {
   );
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ $isPrint?: boolean }>`
   div.skills-table {
     display: flex;
     width: 50%;
@@ -178,25 +183,25 @@ const Wrapper = styled.div`
   .skill-bar.s100 {
     width: 100%;
     animation-name: animate-s100;
-    animation-duration: 2.5s;
+    animation-duration: ${(props) => (props.$isPrint ? "0s" : "2.5s")};
   }
 
   .skill-bar.s80 {
     width: 80%;
     animation-name: animate-s80;
-    animation-duration: 2s;
+    animation-duration: ${(props) => (props.$isPrint ? "0s" : "2s")};
   }
 
   .skill-bar.s60 {
     width: 60%;
     animation-name: animate-s60;
-    animation-duration: 1.5s;
+    animation-duration: ${(props) => (props.$isPrint ? "0s" : "1.5s")};
   }
 
   .skill-bar.s40 {
     width: 40%;
     animation-name: animate-s40;
-    animation-duration: 1s;
+    animation-duration: ${(props) => (props.$isPrint ? "0s" : "1s")};
   }
 `;
 
