@@ -123,7 +123,7 @@ const Wrapper = styled.nav`
     justify-content: center;
     text-decoration: none;
     padding: 0.2rem 1.2rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     flex-grow: 1;
     cursor: pointer;
   }
