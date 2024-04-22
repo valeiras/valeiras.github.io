@@ -11,7 +11,7 @@ const CVLayout: React.FC = () => {
   const { isPrint, setIsPrint } = cvContext;
 
   useEffect(() => {
-    setIsPrint(false);
+    setIsPrint(true);
     const handleResize = () => {
       if (containerRef.current) {
         const cvWidth = containerRef.current.getBoundingClientRect().width;

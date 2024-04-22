@@ -25,8 +25,8 @@ const skillsLeftTable: Skill[] = [
 
 const skillsRightTable: Skill[] = [
   { text: "Javascript", level: "100", iconClass: "devicon-javascript-plain" },
-  { text: "CSS", level: "100", iconClass: "devicon-css3-plain" },
   { text: "Python", level: "80", iconClass: "devicon-python-plain" },
+  { text: "CSS", level: "60", iconClass: "devicon-css3-plain" },
 ];
 
 const toolsLeftTable: Skill[] = [
@@ -37,8 +37,8 @@ const toolsLeftTable: Skill[] = [
 
 const toolsRightTable: Skill[] = [
   { text: "React", level: "100", iconClass: "devicon-react-original" },
-  { text: "Git", level: "80", iconClass: "devicon-git-plain" },
   { text: "Matlab", level: "80", iconClass: "devicon-matlab-plain" },
+  { text: "Git", level: "60", iconClass: "devicon-git-plain" },
 ];
 
 const languagesLeftTable: Language[] = [
