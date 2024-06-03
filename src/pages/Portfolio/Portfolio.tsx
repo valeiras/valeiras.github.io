@@ -52,7 +52,7 @@ const Wrapper = styled.div`
   /* --------------------------- Section classes --------------------------*/
 
   #spacer {
-    height: 100px;
+    height: 120px;
   }
 
   section {
