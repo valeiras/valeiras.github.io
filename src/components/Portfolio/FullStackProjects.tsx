@@ -5,6 +5,7 @@ import { TbWorldWww } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa6";
 
 import imgTualuce from "../../assets/images/Full-stack/Tualuce-1.png";
+import imgWorkingDay from "../../assets/images/Full-stack/working-day.png";
 import imgPortfolio from "../../assets/images/Full-stack/Portfolio.png";
 import imgAcontractluz from "../../assets/images/Full-stack/Acontractluz-2.png";
 import imgCeciRodriguezFotos from "../../assets/images/Full-stack/CeciRodriguezFotos.png";
@@ -15,6 +16,13 @@ import { nanoid } from "nanoid";
 
 const FullStackProjects: React.FC = () => {
   const projects: Project[] = [
+    {
+      projectName: "Working Day",
+      description: `Full-stack app for managing work hours, fully created with Next.js and Typescript. The PostgreSQL database is hosted in Supabase, and the app  in Vercel.`,
+      projectUrl: "https://working-day-two.vercel.app/",
+      gitHubUrl: "https://github.com/valeiras/working-day",
+      img: imgWorkingDay,
+    },
     {
       projectName: "Tualuce",
       description: `Beatiful SPA webpage created using React, React Router and React Transition Group.`,
@@ -109,10 +117,12 @@ const Wrapper = styled.div`
 
   .project-img {
     width: 100%;
+    border-radius: 5px;
   }
 
   .project-description {
     flex-grow: 1;
+    font-size: 0.8rem;
   }
 
   .project-links {
