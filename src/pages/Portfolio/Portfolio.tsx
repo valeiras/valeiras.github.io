@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import Navbar from "../../components/Portfolio/Navbar";
 import { SocialMedia } from "../../components/Index";
@@ -7,31 +7,12 @@ import { PortfolioContextProvider } from "../../components/Portfolio/context";
 import ImageGallery from "../../components/Portfolio/ImageGallery";
 
 const Portfolio: React.FC = () => {
-  const navbarRef = useRef<HTMLUListElement>(null);
-  const spacerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (navbarRef.current && spacerRef.current) {
-        const navbarHeight = navbarRef.current.getBoundingClientRect().height;
-        spacerRef.current.style.height = `${navbarHeight}px`;
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("load", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <PortfolioContextProvider>
       <Wrapper>
-        <Navbar navbarRef={navbarRef} />
+        <Navbar />
+        <div id="spacer" />
         <ImageGallery />
-        <div id="spacer" ref={spacerRef}></div>
-
         <Outlet />
         <SocialMedia />
       </Wrapper>
@@ -52,7 +33,19 @@ const Wrapper = styled.div`
   /* --------------------------- Section classes --------------------------*/
 
   #spacer {
-    height: 120px;
+    height: 70px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    #spacer {
+      height: 80px;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    #spacer {
+      height: 90px;
+    }
   }
 
   section {
@@ -104,10 +97,6 @@ const Wrapper = styled.div`
   h1.section-title {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
-  }
-
-  @media screen and (min-width: 992px) {
-    margin-top: 1rem;
   }
 
   h2 {

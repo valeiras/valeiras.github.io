@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 
 import logo from "../../assets/images/logo.gif";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { usePortofolioContext } from "./context";
 
@@ -16,11 +16,7 @@ const navbarItems: { text: string; section: string }[] = [
   // { text: "Choose your own song", section: "choose-your-own-song" },
 ];
 
-type Props = {
-  navbarRef: React.RefObject<HTMLUListElement>;
-};
-
-const Navbar: React.FC<Props> = ({ navbarRef }) => {
+const Navbar: React.FC = () => {
   const context = usePortofolioContext();
   if (context === null) throw new Error("Porfolio context if missing");
 
@@ -39,15 +35,12 @@ const Navbar: React.FC<Props> = ({ navbarRef }) => {
 
   return (
     <Wrapper id="nav-bar">
-      <ul className="main-bar" ref={navbarRef}>
-        <li
-          id="logo"
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        >
-          <img loading="lazy" id="header-img" src={logo} />
-        </li>
+      <ul className="main-bar">
+        <Link to={"/"}>
+          <li id="logo">
+            <img loading="lazy" id="header-img" src={logo} />
+          </li>
+        </Link>
         {navbarItems.map(({ text, section }) => {
           return (
             <NavLink
@@ -91,7 +84,7 @@ const Wrapper = styled.nav`
   margin: 0;
   padding: 0;
   position: fixed;
-  top: 0;
+  top: 0px;
   flex-direction: column;
   left: 0;
   box-shadow: var(--shadow-2);
@@ -155,6 +148,7 @@ const Wrapper = styled.nav`
     font-size: 1rem;
     margin: 0 1.2rem;
     transition: var(--transition);
+    cursor: pointer;
   }
 
   .nav-toggle.show-links {
