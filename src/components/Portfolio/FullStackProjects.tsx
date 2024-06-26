@@ -18,8 +18,9 @@ const FullStackProjects: React.FC = () => {
   const projects: Project[] = [
     {
       projectName: "Working Day",
-      description: `Full-stack app for managing work hours, fully created with Next.js and Typescript. The PostgreSQL database is hosted in Supabase, and the app  in Vercel.`,
-      projectUrl: "https://working-day-two.vercel.app/",
+      description: `Full-stack app for managing work hours, fully created with Next.js and Typescript. The PostgreSQL database is hosted in Supabase. 
+        Main features are tested using Vitest and React Testing Library.`,
+      projectUrl: "https://working-day-2.vercel.app/",
       gitHubUrl: "https://github.com/valeiras/working-day",
       img: imgWorkingDay,
     },
