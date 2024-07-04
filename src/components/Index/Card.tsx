@@ -43,7 +43,11 @@ const Wrapper = styled.div`
     margin: auto;
     position: relative;
     width: 19.5vw;
+    min-width: 195px;
+    max-width: 300px;
     height: 19.5vw;
+    min-height: 195px;
+    max-height: 300px;
   }
 
   img.snapshot {
