@@ -39,16 +39,27 @@ const Wrapper = styled.div`
     transform: scale(1.05);
   }
 
+  .img-container {
+    margin: auto;
+    position: relative;
+    width: 19.5vw;
+    height: 19.5vw;
+  }
+
   img.snapshot {
-    width: 65%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
     border-radius: 20px;
     box-shadow: 1px 1px 3px var(--dark-blue);
   }
 
   @media screen and (min-width: 992px) {
-    img.snapshot {
-      width: 60%;
+    .img-container {
+      width: 18vw;
+      height: 18vw;
     }
   }
 
