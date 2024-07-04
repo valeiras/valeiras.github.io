@@ -7,6 +7,7 @@ import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 import poseEstimationImg from "../..//assets/images/PhD/Pose-estimation.png";
 import { usePortofolioContext } from "../../components/Portfolio/context";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const PhD: React.FC = () => {
   const context = usePortofolioContext();
@@ -75,8 +76,7 @@ const PhD: React.FC = () => {
         </li>
       </ul>
 
-      <img
-        loading="lazy"
+      <LazyLoadImage
         src={poseEstimationImg}
         alt="3D Pose Estimation"
         className="img-half"

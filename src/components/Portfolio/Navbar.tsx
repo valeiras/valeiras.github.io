@@ -5,6 +5,7 @@ import logo from "../../assets/images/logo.gif";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { usePortofolioContext } from "./context";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const navbarItems: { text: string; section: string }[] = [
   { text: "Full-stack developer", section: "full-stack" },
@@ -38,7 +39,7 @@ const Navbar: React.FC = () => {
       <ul className="main-bar">
         <Link to={"/"}>
           <li id="logo">
-            <img loading="lazy" id="header-img" src={logo} />
+            <LazyLoadImage id="header-img" src={logo} />
           </li>
         </Link>
         {navbarItems.map(({ text, section }) => {

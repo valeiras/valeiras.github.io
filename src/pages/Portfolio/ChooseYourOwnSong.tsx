@@ -1,4 +1,5 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import styled from "styled-components";
 
 const ChooseYourOwnSong: React.FC = () => {
@@ -33,7 +34,7 @@ const ChooseYourOwnSong: React.FC = () => {
           </p>
         </div>
 
-        <img loading="lazy" src="/assets/images/flux-diagram.png" alt="3D Pose Estimation" className="img-full-width" />
+        <LazyLoadImage src="/assets/images/flux-diagram.png" alt="3D Pose Estimation" className="img-full-width" />
 
         <div className="text-block">
           <p>

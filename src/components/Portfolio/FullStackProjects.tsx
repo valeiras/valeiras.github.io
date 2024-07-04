@@ -14,6 +14,7 @@ import imgRichEditor from "../../assets/images/Full-stack/RichEditor.png";
 
 import { Link } from "react-router-dom";
 import { nanoid } from "nanoid";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const FullStackProjects: React.FC = () => {
   const projects: Project[] = [
@@ -86,7 +87,7 @@ const FullStackProjects: React.FC = () => {
           <div className="project-container" key={nanoid()}>
             <h3 className="project-name">{projectName}</h3>
             <Link to={projectUrl} target="_blank">
-              <img src={img} alt={projectName} className="project-img" />
+              <LazyLoadImage src={img} alt={projectName} className="project-img" />
             </Link>
             <p className="project-description">{description}</p>
             <div className="project-links">

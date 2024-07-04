@@ -1,14 +1,16 @@
 import { createHashRouter, RouterProvider } from "react-router-dom";
-import { Home, Curriculum, Portfolio } from "./pages/";
-import {
-  Mekanika,
-  FullStack,
-  PequenaBandaRobotica,
-  HouseHoldMusic,
-  PhD,
-  Music,
-  ChooseYourOwnSong,
-} from "./pages/Portfolio";
+import { lazy } from "react";
+
+const Home = lazy(() => import("./pages/Home"));
+const Curriculum = lazy(() => import("./pages/Curriculum"));
+const Portfolio = lazy(() => import("./pages/Portfolio/Portfolio"));
+const Mekanika = lazy(() => import("./pages/Portfolio/Mekanika"));
+const FullStack = lazy(() => import("./pages/Portfolio/FullStack"));
+const PequenaBandaRobotica = lazy(() => import("./pages/Portfolio/PequenaBandaRobotica"));
+const HouseHoldMusic = lazy(() => import("./pages/Portfolio/HouseHoldMusic"));
+const PhD = lazy(() => import("./pages/Portfolio/PhD"));
+const Music = lazy(() => import("./pages/Portfolio/Music"));
+const ChooseYourOwnSong = lazy(() => import("./pages/Portfolio/ChooseYourOwnSong"));
 
 const App: React.FC = () => {
   const router = createHashRouter([

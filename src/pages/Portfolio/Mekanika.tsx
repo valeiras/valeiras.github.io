@@ -27,6 +27,7 @@ import person1PlayingImg from "../../assets/images/Mekanika/person1-playing.gif"
 import person2PlayingImg from "../../assets/images/Mekanika/person2-playing.gif";
 import kid1PlayingImg from "../../assets/images/Mekanika/kid1-playing.gif";
 import kid2PlayingImg from "../../assets/images/Mekanika/kid2-playing.gif";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Mekanika: React.FC = () => {
   const context = usePortofolioContext();
@@ -108,7 +109,7 @@ const Mekanika: React.FC = () => {
         </p>
       </div>
 
-      <img loading="lazy" src={controllerImg} alt="MIDI controller" className="img-full-width" />
+      <LazyLoadImage src={controllerImg} alt="MIDI controller" className="img-full-width" />
 
       <div className="text-block">
         <p>

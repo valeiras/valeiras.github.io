@@ -1,4 +1,5 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import styled from "styled-components";
 
 type Props = {
@@ -14,7 +15,7 @@ const Card: React.FC<Props> = ({ link, title, img }) => {
         <div className="card">
           <div className="title">{title}</div>
           <div className="img-container">
-            <img className="snapshot" src={img} alt="Porfolio" />
+            <LazyLoadImage className="snapshot" src={img} alt="Porfolio" />
           </div>
         </div>
       </a>
