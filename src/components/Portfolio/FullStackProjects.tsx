@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa6";
 
 import imgTualuce from "../../assets/images/Full-stack/Tualuce-1.png";
 import imgWorkingDay from "../../assets/images/Full-stack/working-day.png";
+import imgArtesa from "../../assets/images/Full-stack/artesa.png";
 import imgPortfolio from "../../assets/images/Full-stack/Portfolio.png";
 import imgAcontractluz from "../../assets/images/Full-stack/Acontractluz-2.png";
 import imgCeciRodriguezFotos from "../../assets/images/Full-stack/CeciRodriguezFotos.png";
@@ -18,11 +19,19 @@ const FullStackProjects: React.FC = () => {
   const projects: Project[] = [
     {
       projectName: "Working Day",
-      description: `Full-stack app for managing work hours, fully created with Next.js and Typescript. The PostgreSQL database is hosted in Supabase. 
-        Main features are tested using Vitest and React Testing Library.`,
+      description: `Full-stack app for managing work hours, fully created with Next.js and DaisyUI. 
+        The code is wirtten in Typescript, and its main features are tested using Vitest and React Testing library. The PostgreSQL database is hosted in Supabase.`,
       projectUrl: "https://working-day-two.vercel.app/",
       gitHubUrl: "https://github.com/valeiras/working-day",
       img: imgWorkingDay,
+    },
+    {
+      projectName: "Artesa",
+      description: `Full-stack app for managing product traceability, fully created with Next.js and Shadcn UI. 
+        The code is written in Typescript, and the database is hosted in Supabase.`,
+      projectUrl: "https://artesa.vercel.app/",
+      gitHubUrl: "https://github.com/valeiras/artesa",
+      img: imgArtesa,
     },
     {
       projectName: "Tualuce",
