@@ -14,7 +14,6 @@ import imgRichEditor from "../../assets/images/Full-stack/RichEditor.png";
 
 import { Link } from "react-router-dom";
 import { nanoid } from "nanoid";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const FullStackProjects: React.FC = () => {
   const projects: Project[] = [
@@ -81,13 +80,13 @@ const FullStackProjects: React.FC = () => {
   ];
 
   return (
-    <Wrapper>
+    <Wrapper className="WrapperProjectsContainer">
       {projects.map(({ projectName, description, projectUrl, gitHubUrl, myContribution, img }) => {
         return (
           <div className="project-container" key={nanoid()}>
             <h3 className="project-name">{projectName}</h3>
             <Link to={projectUrl} target="_blank">
-              <LazyLoadImage src={img} alt={projectName} className="project-img" />
+              <img width={640} height={360} src={img} alt={projectName} className="project-img" />
             </Link>
             <p className="project-description">{description}</p>
             <div className="project-links">
@@ -117,6 +116,7 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr;
   margin-top: 2rem;
   gap: 2rem;
+  justify-items: start;
 
   @media screen and (min-width: 992px) {
     grid-template-columns: 1fr 1fr;
@@ -140,6 +140,7 @@ const Wrapper = styled.div`
 
   .project-img {
     width: 100%;
+    height: auto;
     border-radius: 5px;
   }
 

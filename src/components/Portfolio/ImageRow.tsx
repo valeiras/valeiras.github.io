@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { ImageSource } from "../../types";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const BREAKPOINT = 992;
 
@@ -84,7 +83,7 @@ const ImageRow: React.FC<Props> = ({ imageSources, isResponsive, handleClick }) 
       {imageSources.map(({ src, alt }, id) => {
         const width = !isResponsive || windowWidth > BREAKPOINT ? `${100 * fractions[id]}%` : `100%`;
         return (
-          <LazyLoadImage
+          <img
             src={src}
             alt={alt}
             width={width}

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Suspense } from "react";
 import styled from "styled-components";
 import Navbar from "../../components/Portfolio/Navbar";
 import { SocialMedia } from "../../components/Index";
 import { Outlet } from "react-router-dom";
 import { PortfolioContextProvider } from "../../components/Portfolio/context";
 import ImageGallery from "../../components/Portfolio/ImageGallery";
+import SuspensePlaceholder from "./SuspensePlaceholder";
 
 const Portfolio: React.FC = () => {
   return (
@@ -13,7 +14,9 @@ const Portfolio: React.FC = () => {
         <Navbar />
         <div id="spacer" />
         <ImageGallery />
-        <Outlet />
+        <Suspense fallback={<SuspensePlaceholder />}>
+          <Outlet />
+        </Suspense>
         <SocialMedia />
       </Wrapper>
     </PortfolioContextProvider>

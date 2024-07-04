@@ -3,8 +3,9 @@ import styled from "styled-components";
 import personalPhoto from "../../assets/images/CV/Foto CV.png";
 import { About, Contact, Education, Experience, Skills } from "./";
 import { useCVContext } from "./context";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
 
+// const personalPhoto = "/public/images/CV/Foto CV.png";
 const CVLayout: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const cvContext = useCVContext();
@@ -50,7 +51,7 @@ const CVLayout: React.FC = () => {
     <Wrapper>
       <div id="cv-container" ref={containerRef}>
         <div id="left-container">
-          <LazyLoadImage id="personal-photo" src={personalPhoto} alt="David Reverter Valeiras" />
+          <img width="800" height="590" id="personal-photo" src={personalPhoto} alt="David Reverter Valeiras" />
           <About />
 
           {!isPrint && (
@@ -128,6 +129,7 @@ const Wrapper = styled.div`
 
   #personal-photo {
     width: 70%;
+    height: auto;
     border-radius: 10px;
     flex-grow: 0;
   }
