@@ -18,62 +18,70 @@ import { nanoid } from "nanoid";
 const FullStackProjects: React.FC = () => {
   const projects: Project[] = [
     {
-      projectName: "Working Day",
-      description: `Full-stack app for managing work hours, fully created with Next.js and DaisyUI. 
-        The code is wirtten in Typescript, and its main features are tested using Vitest and React Testing library. The PostgreSQL database is hosted in Supabase.`,
-      projectUrl: "https://working-day-two.vercel.app/",
-      gitHubUrl: "https://github.com/valeiras/working-day",
-      img: imgWorkingDay,
-    },
-    {
       projectName: "Artesa",
-      description: `Full-stack app for managing product traceability, fully created with Next.js and Shadcn UI. 
+      description: `Full-stack app for managing product traceability, fully created with Next.js and shadcn/ui. 
         The code is written in Typescript, and the database is hosted in Supabase.`,
       projectUrl: "https://artesa.vercel.app/",
       gitHubUrl: "https://github.com/valeiras/artesa",
+      myContribution: "In charge of the full project.",
       img: imgArtesa,
     },
     {
       projectName: "Tualuce",
       description: `Beatiful SPA webpage created using React, React Router and React Transition Group.`,
       projectUrl: "https://tualuce.eu",
+      myContribution: "Only responsible for the front-end.",
       img: imgTualuce,
     },
     {
+      projectName: "Working Day",
+      description: `Full-stack app for managing work hours, fully created with Next.js and DaisyUI. 
+      The code is wirtten in Typescript, and its main features are tested using Vitest and React Testing library. The PostgreSQL database is hosted in Supabase.`,
+      projectUrl: "https://working-day-two.vercel.app/",
+      gitHubUrl: "https://github.com/valeiras/working-day",
+      myContribution: "In charge of the full project.",
+      img: imgWorkingDay,
+    },
+    {
       projectName: "This portfolio",
-      description: `This very portfolio is a React project, written in Typescript and hosted in gitHub pages-`,
+      description: `This very portfolio is a React project, written in Typescript and hosted in gitHub pages.
+        Styles are applied using styles components.`,
       projectUrl: "https://valeiras.github.io/#/portfolio/full-stack",
       gitHubUrl: "https://github.com/valeiras/valeiras.github.io",
+      myContribution: "In charge of the full project.",
       img: imgPortfolio,
     },
     {
       projectName: "Rich text editor",
       description: `Rich text editor created using Lexical and React. 
-        The editor is then provided as a web component, so it can be later included in any project using whichever framework.`,
+      The editor is then provided as a web component, so it can be later included in any project using whichever framework.`,
       projectUrl: "https://utils.ennubo.es/editor/",
       gitHubUrl: "https://github.com/valeiras/react-rich-text-editor",
+      myContribution: "In charge of the full project.",
       img: imgRichEditor,
     },
     {
       projectName: "Ceci Rodríguez Fotos",
       description: `Personal portfolio webpage for Spanish photographer Ceci Rodríguez. This project includes a private secure area
-      that allows the owner to upload new pictures and update the contents of the webpage.`,
+      that allows the owner to upload new pictures and update the contents of the webpage, which are hosted in MongoDB Atlas.`,
       projectUrl: "https://www.ceci-rodriguez-fotos.es/",
       gitHubUrl: "https://github.com/valeiras/ceci-rod-fotos-fullstack",
+      myContribution: "In charge of the full project.",
       img: imgCeciRodriguezFotos,
     },
     {
       projectName: "Acontract-luz",
       description: `Another beatiful SPA webpage created with React. 
-        It includes a personal client area and access the full manufacturer's catalog from its database.`,
+      It includes a personal client area and access the full manufacturer's catalog from its database.`,
       projectUrl: "https://www.acontract-luz.com/",
+      myContribution: "Only responsible for the front-end.",
       img: imgAcontractluz,
     },
   ];
 
   return (
     <Wrapper>
-      {projects.map(({ projectName, description, projectUrl, gitHubUrl, img }) => {
+      {projects.map(({ projectName, description, projectUrl, gitHubUrl, myContribution, img }) => {
         return (
           <div className="project-container" key={nanoid()}>
             <h3 className="project-name">{projectName}</h3>
@@ -91,6 +99,10 @@ const FullStackProjects: React.FC = () => {
                 </Link>
               )}
             </div>
+            <p className="contribution">
+              <span className="contribution-header">My contribution: </span>
+              {myContribution}
+            </p>
           </div>
         );
       })}
@@ -133,6 +145,14 @@ const Wrapper = styled.div`
   .project-description {
     flex-grow: 1;
     font-size: 0.8rem;
+  }
+
+  .contribution {
+    font-size: 0.8rem;
+  }
+
+  .contribution-header {
+    font-weight: bold;
   }
 
   .project-links {
